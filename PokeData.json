@@ -977,12 +977,12 @@
     },
     {
       "id": 196,
-      "name": "Girafarig",
+      "name": "Espeon",
       "model": "./models/196.glb"
     },
     {
       "id": 197,
-      "name": "Pineco",
+      "name": "Umbreon",
       "model": "./models/197.glb"
     },
     {
@@ -1012,7 +1012,7 @@
     },
     {
       "id": 203,
-      "name": "Granbull",
+      "name": "Girafarig",
       "model": "./models/203.glb"
     },
     {
@@ -1067,7 +1067,7 @@
     },
     {
       "id": 214,
-      "name": "Gulpin",
+      "name": "Heracross",
       "model": "./models/214.glb"
     },
     {
@@ -1077,7 +1077,7 @@
     },
     {
       "id": 216,
-      "name": "Cacturne",
+      "name": "Teddiursa",
       "model": "./models/216.glb"
     },
     {
@@ -3497,113 +3497,123 @@
     },
     {
       "id": 700,
-      "name": "Emboar (Galarian)",
+      "name": "Sylveon",
       "model": "./models/700.glb"
     },
     {
       "id": 701,
-      "name": "Oshawott (Galarian)",
+      "name": "Hawlucha",
       "model": "./models/701.glb"
     },
     {
       "id": 702,
-      "name": "Dewott (Galarian)",
+      "name": "Dedenne",
       "model": "./models/702.glb"
     },
     {
       "id": 703,
-      "name": "Samurott (Galarian)",
+      "name": "Carbink",
       "model": "./models/703.glb"
     },
     {
       "id": 704,
-      "name": "Zorua",
+      "name": "Goomy",
       "model": "./models/704.glb"
     },
     {
       "id": 705,
-      "name": "Zoroark",
+      "name": "Sliggoo",
       "model": "./models/705.glb"
     },
     {
       "id": 706,
-      "name": "Toxel",
+      "name": "Goodra",
       "model": "./models/706.glb"
     },
     {
       "id": 707,
-      "name": "Toxtricity",
+      "name": "Klefki",
       "model": "./models/707.glb"
     },
     {
       "id": 708,
-      "name": "Toxtricity (Low Key)",
+      "name": "Phantump",
       "model": "./models/708.glb"
     },
     {
       "id": 709,
-      "name": "Stonjourner",
+      "name": "Trevenant",
       "model": "./models/709.glb"
     },
     {
       "id": 710,
-      "name": "Eternatus",
+      "name": "Pumpkaboo",
       "model": "./models/710.glb"
     },
     {
       "id": 711,
-      "name": "Zacian",
+      "name": "Gourgeist",
       "model": "./models/711.glb"
     },
     {
       "id": 712,
-      "name": "Zamazenta",
+      "name": "Bergmite",
       "model": "./models/712.glb"
     },
     {
       "id": 713,
-      "name": "Eternatus (Crowned)",
+      "name": "Avalugg",
       "model": "./models/713.glb"
     },
     {
       "id": 714,
-      "name": "Regieleki",
+      "name": "Noibat",
       "model": "./models/714.glb"
     },
     {
       "id": 715,
-      "name": "Regidrago",
+      "name": "Noivern",
       "model": "./models/715.glb"
     },
     {
       "id": 716,
-      "name": "Calyrex",
+      "name": "Xerneas",
       "model": "./models/716.glb"
     },
     {
       "id": 717,
-      "name": "Calyrex (Shadow)",
+      "name": "Yveltal",
       "model": "./models/717.glb"
     },
     {
       "id": 718,
-      "name": "Calyrex (Ice)",
+      "name": "Zygarde (50% form)",
       "model": "./models/718.glb"
     },
     {
       "id": 719,
-      "name": "Galarian Zapdos",
+      "name": "Diancie",
       "model": "./models/719.glb"
     },
     {
       "id": 720,
-      "name": "Galarian Moltres",
+      "name": "Hoopa",
       "model": "./models/720.glb"
     },
     {
       "id": 721,
-      "name": "Galarian Articuno",
+      "name": "Volcanion",
       "model": "./models/721.glb"
+    },
+    {
+      "id": 722,
+      "name": "Rowlet",
+      "model": "./models/722.glb"
+    },
+    {
+      "id": 890,
+      "name": "Eturnatus",
+      "model": "./models/890.glb"
     }
   ]
 }
