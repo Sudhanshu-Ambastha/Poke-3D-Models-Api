@@ -6,18 +6,16 @@ At Pokémon 3D Model Viewer, we prioritize the security of our users and contrib
 
 If you discover a security vulnerability in the Pokémon 3D Model Viewer project, please report it responsibly. Do not disclose the vulnerability publicly until it has been addressed.
 
-### How to Report a Security Issue:
-
-1. **Create an Issue on GitHub:**
+### How to Report a Security Issue
+1. **Create an Issue on GitHub**
    - Go to the [Issues page](https://github.com/Sudhanshu-Ambastha/Poke-3D-Models/issues) of the Pokémon 3D Model Viewer repository.
-   - Create a new issue and include as many details as possible about the vulnerability you have found.
+   - Create a new issue and include the following details:
+   - A detailed description of the vulnerability.
+   - Steps to reproduce the issue (if applicable).
+   - Any relevant files, logs, or screenshots to help us investigate the issue.
 
-2. **Provide Information:**
-   - A description of the vulnerability
-   - Steps to reproduce the issue (if applicable)
-   - Any relevant files or screenshots to help us understand the problem
-
-Once the issue is reported, we will prioritize it and provide a fix as soon as possible.
+2. **Contact Us on Discord**
+- For quicker collaboration, join our [Discord Server](https://discord.gg/yjEeDQg5) and message the maintainers directly. Please label your message as a security report. Once the issue is reported, we will prioritize it and provide a fix as soon as possible.
 
 ## How We Handle Security Reports
 
