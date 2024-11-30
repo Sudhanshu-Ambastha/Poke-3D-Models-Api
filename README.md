@@ -32,7 +32,7 @@ If you want to fetch Pokémon data from this project to use in your own applicat
 ### API Endpoint
 The Pokémon data is exposed as a JSON API. You can access it using the following URL:
 ```
-https://github.com/Sudhanshu-Ambastha/Pokemon-3D-Models/blob/main/PokeData.json
+https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-Models/main/PokeData.json
 ```
 
 ## Contributing
