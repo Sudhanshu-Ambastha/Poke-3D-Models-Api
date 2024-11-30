@@ -52,7 +52,6 @@
             color: #333;
         }
 
-        /* Modal Styles */
         #modelModal {
             display: none;
             position: fixed;
@@ -90,7 +89,36 @@
             text-decoration: none;
         }
 
-        /* Add responsive style for smaller screens */
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .search-bar input {
+            width: 60%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .search-bar button {
+            padding: 0.5rem 1rem;
+            margin-left: 0.5rem;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #45a049;
+        }
+
         @media (max-width: 600px) {
             #modalContent {
                 width: 90%;
@@ -104,17 +132,20 @@
     </header>
 
     <div class="container">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search Pokémon by Name or ID">
+            <button id="searchButton">🔍Search</button>
+        </div>
         <div id="pokedex" class="pokedex"></div>
     </div>
 
-    <!-- Modal for Viewing Pokémon Model -->
     <div id="modelModal">
         <div id="modalContent">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <model-viewer src="pokemon_model.glb" camera-controls auto-rotate animation-name="Attack" alt="Animated Pokémon Model" environment-image="neutral" style="width: 100%; height: 300px;"></model-viewer>
+            <span class="close" onclick="closeModal()">❌</span>
+            <model-viewer id="modelViewerModal" camera-controls auto-rotate animation-name="Attack" alt="Animated Pokémon Model" environment-image="neutral" style="width: 100%; height: 300px;"></model-viewer>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
