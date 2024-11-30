@@ -61,5 +61,8 @@ After submitting your pull request, the project maintainers will review your cha
 ## Code of Conduct
 By contributing to this project, you agree to adhere to the project's Code of Conduct. Please be respectful and considerate to everyone in the community.
 
+## Join the Community
+Want to collaborate, ask questions, or share your ideas? Join our [Discord Server](https://discord.gg/yjEeDQg5) to connect with other contributors and maintainers.
+
 Thank You!
 We appreciate your contributions to the Pokémon 3D Model Viewer project. Your help makes this project better and more fun for everyone. Happy coding, and thank you for contributing!
