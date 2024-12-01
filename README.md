@@ -14,6 +14,7 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
   - [How to Add More Models](#how-to-add-more-models)
   - [Note About APIs](#note-about-apis)
   - [License](#license)
+  - [Contributors](#contributors)
 
 ---
 
@@ -95,4 +96,9 @@ While there are many **Pokémon APIs** available that provide Pokémon data (e.g
 
 This project is open source and available under the [MIT License](./LICENSE).
 
-<!-- [link for pokedex 500](https://en.wikipedia.org/wiki/List_of_Pok%C3%A9mon) -->
+## Contributors
+<a href = "https://github.com/Sudhanshu-Ambastha/Poke-3D-Models/contributors">
+  <img src = "https://contrib.rocks/image?repo=Sudhanshu-Ambastha/Poke-3D-Models"/>
+</a>
+
+<!-- [link for pokedex 775](https://en.wikipedia.org/wiki/List_of_Pok%C3%A9mon) -->
