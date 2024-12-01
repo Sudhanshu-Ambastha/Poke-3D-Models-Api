@@ -101,4 +101,4 @@ This project is open source and available under the [MIT License](./LICENSE).
   <img src = "https://contrib.rocks/image?repo=Sudhanshu-Ambastha/Poke-3D-Models"/>
 </a>
 
-<!-- [link for pokedex 775](https://en.wikipedia.org/wiki/List_of_Pok%C3%A9mon) -->
+<!-- [link for pokedex 732](https://en.wikipedia.org/wiki/List_of_Pok%C3%A9mon) -->
