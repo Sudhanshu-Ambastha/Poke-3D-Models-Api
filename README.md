@@ -95,4 +95,3 @@ While there are many **Pokémon APIs** available that provide Pokémon data (e.g
 
 This project is open source and available under the [MIT License](./LICENSE).
 
-[link for pokedex](https://www.pokemon.com/us/pokedex/abra)
