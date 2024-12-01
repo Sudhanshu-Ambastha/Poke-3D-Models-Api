@@ -1752,752 +1752,752 @@
     },
     {
       "id": 351,
-      "name": "Axew",
+      "name": "Castform",
       "model": "./models/351.glb"
     },
     {
       "id": 352,
-      "name": "Fraxure",
+      "name": "Kecleon",
       "model": "./models/352.glb"
     },
     {
       "id": 353,
-      "name": "Haxorus",
+      "name": "Shuppet",
       "model": "./models/353.glb"
     },
     {
       "id": 354,
-      "name": "Minccino",
+      "name": "Banette",
       "model": "./models/354.glb"
     },
     {
       "id": 355,
-      "name": "Cinccino",
+      "name": "Duskull",
       "model": "./models/355.glb"
     },
     {
       "id": 356,
-      "name": "Gothita",
+      "name": "Dusclops",
       "model": "./models/356.glb"
     },
     {
       "id": 357,
-      "name": "Gothorita",
+      "name": "Tropius",
       "model": "./models/357.glb"
     },
     {
       "id": 358,
-      "name": "Gothitelle",
+      "name": "Chimecho",
       "model": "./models/358.glb"
     },
     {
       "id": 359,
-      "name": "Solosis",
+      "name": "Absol",
       "model": "./models/359.glb"
     },
     {
       "id": 360,
-      "name": "Duosion",
+      "name": "Wynaut",
       "model": "./models/360.glb"
     },
     {
       "id": 361,
-      "name": "Reuniclus",
+      "name": "Snorunt",
       "model": "./models/361.glb"
     },
     {
       "id": 362,
-      "name": "Ducklett",
+      "name": "Glalie",
       "model": "./models/362.glb"
     },
     {
       "id": 363,
-      "name": "Swanna",
+      "name": "Spheal",
       "model": "./models/363.glb"
     },
     {
       "id": 364,
-      "name": "Vanillite",
+      "name": "Sealeo",
       "model": "./models/364.glb"
     },
     {
       "id": 365,
-      "name": "Vanillish",
+      "name": "Walrein",
       "model": "./models/365.glb"
     },
     {
       "id": 366,
-      "name": "Vanilluxe",
+      "name": "Clamperl",
       "model": "./models/366.glb"
     },
     {
       "id": 367,
-      "name": "Deerling",
+      "name": "Huntail",
       "model": "./models/367.glb"
     },
     {
       "id": 368,
-      "name": "Sawsbuck",
+      "name": "Gorebyss",
       "model": "./models/368.glb"
     },
     {
       "id": 369,
-      "name": "Emolga",
+      "name": "Relicanth",
       "model": "./models/369.glb"
     },
     {
       "id": 370,
-      "name": "Karrablast",
+      "name": "Luvdisc",
       "model": "./models/370.glb"
     },
     {
       "id": 371,
-      "name": "Escavalier",
+      "name": "Bagon",
       "model": "./models/371.glb"
     },
     {
       "id": 372,
-      "name": "Foongus",
+      "name": "Sheldon",
       "model": "./models/372.glb"
     },
     {
       "id": 373,
-      "name": "Amoonguss",
+      "name": "Salamance",
       "model": "./models/373.glb"
     },
     {
       "id": 374,
-      "name": "Frillish",
+      "name": "Beldum",
       "model": "./models/374.glb"
     },
     {
       "id": 375,
-      "name": "Jellicent",
+      "name": "Metang",
       "model": "./models/375.glb"
     },
     {
       "id": 376,
-      "name": "Alomomola",
+      "name": "Metagross",
       "model": "./models/376.glb"
     },
     {
       "id": 377,
-      "name": "Sandile",
+      "name": "Regirock",
       "model": "./models/377.glb"
     },
     {
       "id": 378,
-      "name": "Krokorok",
+      "name": "Regice",
       "model": "./models/378.glb"
     },
     {
       "id": 379,
-      "name": "Krookodile",
+      "name": "Registeel",
       "model": "./models/379.glb"
     },
     {
       "id": 380,
-      "name": "Darumaka",
+      "name": "Latias",
       "model": "./models/380.glb"
     },
     {
       "id": 381,
-      "name": "Darmanitan",
+      "name": "Latios",
       "model": "./models/381.glb"
     },
     {
       "id": 382,
-      "name": "Maractus",
+      "name": "Kyogre",
       "model": "./models/382.glb"
     },
     {
       "id": 383,
-      "name": "Sigilyph",
+      "name": "Groudon",
       "model": "./models/383.glb"
     },
     {
       "id": 384,
-      "name": "Yamask",
+      "name": "Rayquaza",
       "model": "./models/384.glb"
     },
     {
       "id": 385,
-      "name": "Cofagrigus",
+      "name": "Jirachi",
       "model": "./models/385.glb"
     },
     {
       "id": 386,
-      "name": "Tirtouga",
+      "name": "Deoxys",
       "model": "./models/386.glb"
     },
     {
       "id": 387,
-      "name": "Carracosta",
+      "name": "Turtwig",
       "model": "./models/387.glb"
     },
     {
       "id": 388,
-      "name": "Archen",
+      "name": "Grotle",
       "model": "./models/388.glb"
     },
     {
       "id": 389,
-      "name": "Archeops",
+      "name": "Torterra",
       "model": "./models/389.glb"
     },
     {
       "id": 390,
-      "name": "Zorua",
+      "name": "Chimchar",
       "model": "./models/390.glb"
     },
     {
       "id": 391,
-      "name": "Zoroark",
+      "name": "Monferno",
       "model": "./models/391.glb"
     },
     {
       "id": 392,
-      "name": "Minccino",
+      "name": "Infernape",
       "model": "./models/392.glb"
     },
     {
       "id": 393,
-      "name": "Chespin",
+      "name": "Piplup",
       "model": "./models/393.glb"
     },
     {
       "id": 394,
-      "name": "Quilladin",
+      "name": "Prinplup",
       "model": "./models/394.glb"
     },
     {
       "id": 395,
-      "name": "Chestnaught",
+      "name": "Empoleon",
       "model": "./models/395.glb"
     },
     {
       "id": 396,
-      "name": "Fennekin",
+      "name": "Starly",
       "model": "./models/396.glb"
     },
     {
       "id": 397,
-      "name": "Braixen",
+      "name": "Staravia",
       "model": "./models/397.glb"
     },
     {
       "id": 398,
-      "name": "Delphox",
+      "name": "Staraptor",
       "model": "./models/398.glb"
     },
     {
       "id": 399,
-      "name": "Froakie",
+      "name": "Bidoof",
       "model": "./models/399.glb"
     },
     {
       "id": 400,
-      "name": "Frogadier",
+      "name": "Bibarel",
       "model": "./models/400.glb"
     },
     {
       "id": 401,
-      "name": "Greninja",
+      "name": "Kricketot",
       "model": "./models/401.glb"
     },
     {
       "id": 402,
-      "name": "Bunnelby",
+      "name": "Kricktune",
       "model": "./models/402.glb"
     },
     {
       "id": 403,
-      "name": "Diggersby",
+      "name": "Shinx",
       "model": "./models/403.glb"
     },
     {
       "id": 404,
-      "name": "Fletchinder",
+      "name": "Luxio",
       "model": "./models/404.glb"
     },
     {
       "id": 405,
-      "name": "Talonflame",
+      "name": "Luxray",
       "model": "./models/405.glb"
     },
     {
       "id": 406,
-      "name": "Scatterbug",
+      "name": "Budew",
       "model": "./models/406.glb"
     },
     {
       "id": 407,
-      "name": "Spewpa",
+      "name": "Roserade",
       "model": "./models/407.glb"
     },
     {
       "id": 408,
-      "name": "Vivillon",
+      "name": "Cranidos",
       "model": "./models/408.glb"
     },
     {
       "id": 409,
-      "name": "Litleo",
+      "name": "Rampardos",
       "model": "./models/409.glb"
     },
     {
       "id": 410,
-      "name": "Pyroar",
+      "name": "Shieldon",
       "model": "./models/410.glb"
     },
     {
       "id": 411,
-      "name": "Flabébé",
+      "name": "Bastiodon",
       "model": "./models/411.glb"
     },
     {
       "id": 412,
-      "name": "Floette",
+      "name": "Burmy",
       "model": "./models/412.glb"
     },
     {
       "id": 413,
-      "name": "Florges",
+      "name": "Wormadam",
       "model": "./models/413.glb"
     },
     {
       "id": 414,
-      "name": "Honedge",
+      "name": "Mothim",
       "model": "./models/414.glb"
     },
     {
       "id": 415,
-      "name": "Doublade",
+      "name": "Combee",
       "model": "./models/415.glb"
     },
     {
       "id": 416,
-      "name": "Aegislash",
+      "name": "Vespiquen",
       "model": "./models/416.glb"
     },
     {
       "id": 417,
-      "name": "Spritzee",
+      "name": "Pashirisu",
       "model": "./models/417.glb"
     },
     {
       "id": 418,
-      "name": "Aromatisse",
+      "name": "Buizel",
       "model": "./models/418.glb"
     },
     {
       "id": 419,
-      "name": "Swirlix",
+      "name": "Floatzel",
       "model": "./models/419.glb"
     },
     {
       "id": 420,
-      "name": "Slurpuff",
+      "name": "Cherubi",
       "model": "./models/420.glb"
     },
     {
       "id": 421,
-      "name": "Inkay",
+      "name": "Cherrim",
       "model": "./models/421.glb"
     },
     {
       "id": 422,
-      "name": "Malamar",
+      "name": "Shellos",
       "model": "./models/422.glb"
     },
     {
       "id": 423,
-      "name": "Binacle",
+      "name": "Gastrodon",
       "model": "./models/423.glb"
     },
     {
       "id": 424,
-      "name": "Barbacle",
+      "name": "Ambipom",
       "model": "./models/424.glb"
     },
     {
       "id": 425,
-      "name": "Skrelp",
+      "name": "Drifloon",
       "model": "./models/425.glb"
     },
     {
       "id": 426,
-      "name": "Dragalge",
+      "name": "Drifblim",
       "model": "./models/426.glb"
     },
     {
       "id": 427,
-      "name": "Clauncher",
+      "name": "Buneary",
       "model": "./models/427.glb"
     },
     {
       "id": 428,
-      "name": "Clawitzer",
+      "name": "Lopunny",
       "model": "./models/428.glb"
     },
     {
       "id": 429,
-      "name": "Helioptile",
+      "name": "Mismagius",
       "model": "./models/429.glb"
     },
     {
       "id": 430,
-      "name": "Heliolisk",
+      "name": "Honchkrow",
       "model": "./models/430.glb"
     },
     {
       "id": 431,
-      "name": "Tyrunt",
+      "name": "Glameow",
       "model": "./models/431.glb"
     },
     {
       "id": 432,
-      "name": "Tyrantrum",
+      "name": "Purugly",
       "model": "./models/432.glb"
     },
     {
       "id": 433,
-      "name": "Amaura",
+      "name": "Chingling",
       "model": "./models/433.glb"
     },
     {
       "id": 434,
-      "name": "Aurorus",
+      "name": "Stunky",
       "model": "./models/434.glb"
     },
     {
       "id": 435,
-      "name": "Sylveon",
+      "name": "Skuntank",
       "model": "./models/435.glb"
     },
     {
       "id": 436,
-      "name": "Hawlucha",
+      "name": "Bronzor",
       "model": "./models/436.glb"
     },
     {
       "id": 437,
-      "name": "Dedenne",
+      "name": "Bronzong",
       "model": "./models/437.glb"
     },
     {
       "id": 438,
-      "name": "Carbink",
+      "name": "Bonsly",
       "model": "./models/438.glb"
     },
     {
       "id": 439,
-      "name": "Goomy",
+      "name": "Mime Jr.",
       "model": "./models/439.glb"
     },
     {
       "id": 440,
-      "name": "Sliggoo",
+      "name": "Happiny",
       "model": "./models/440.glb"
     },
     {
       "id": 441,
-      "name": "Goodra",
+      "name": "Chatot",
       "model": "./models/441.glb"
     },
     {
       "id": 442,
-      "name": "Klefki",
+      "name": "Spiritomb",
       "model": "./models/442.glb"
     },
     {
       "id": 443,
-      "name": "Phantump",
+      "name": "Gible",
       "model": "./models/443.glb"
     },
     {
       "id": 444,
-      "name": "Trevenant",
+      "name": "Gabite",
       "model": "./models/444.glb"
     },
     {
       "id": 445,
-      "name": "Pumpkaboo",
+      "name": "Garchomp",
       "model": "./models/445.glb"
     },
     {
       "id": 446,
-      "name": "Gourgeist",
+      "name": "Munchlax",
       "model": "./models/446.glb"
     },
     {
       "id": 447,
-      "name": "Noibat",
+      "name": "Riolu",
       "model": "./models/447.glb"
     },
     {
       "id": 448,
-      "name": "Noivern",
+      "name": "Lucario",
       "model": "./models/448.glb"
     },
     {
       "id": 449,
-      "name": "Xerneas",
+      "name": "Hippopotas",
       "model": "./models/449.glb"
     },
     {
       "id": 450,
-      "name": "Yveltal",
+      "name": "Hippowdon",
       "model": "./models/450.glb"
     },
     {
       "id": 451,
-      "name": "Zygarde",
+      "name": "Skorupi",
       "model": "./models/451.glb"
     },
     {
       "id": 452,
-      "name": "Diancie",
+      "name": "Drapion",
       "model": "./models/452.glb"
     },
     {
       "id": 453,
-      "name": "Hoopa",
+      "name": "Croagunk",
       "model": "./models/453.glb"
     },
     {
       "id": 454,
-      "name": "Volcanion",
+      "name": "Toxicroak",
       "model": "./models/454.glb"
     },
     {
       "id": 455,
-      "name": "Rowlet",
+      "name": "Carnivine",
       "model": "./models/455.glb"
     },
     {
       "id": 456,
-      "name": "Dartrix",
+      "name": "Finneon",
       "model": "./models/456.glb"
     },
     {
       "id": 457,
-      "name": "Decidueye",
+      "name": "Lumineon",
       "model": "./models/457.glb"
     },
     {
       "id": 458,
-      "name": "Litten",
+      "name": "Mantyke",
       "model": "./models/458.glb"
     },
     {
       "id": 459,
-      "name": "Torracat",
+      "name": "Snover",
       "model": "./models/459.glb"
     },
     {
       "id": 460,
-      "name": "Incineroar",
+      "name": "Abomasnow",
       "model": "./models/460.glb"
     },
     {
       "id": 461,
-      "name": "Popplio",
+      "name": "Weavile",
       "model": "./models/461.glb"
     },
     {
       "id": 462,
-      "name": "Brionne",
+      "name": "Magnezone",
       "model": "./models/462.glb"
     },
     {
       "id": 463,
-      "name": "Primarina",
+      "name": "Lickilicky",
       "model": "./models/463.glb"
     },
     {
       "id": 464,
-      "name": "Pikipek",
+      "name": "Rhyperior",
       "model": "./models/464.glb"
     },
     {
       "id": 465,
-      "name": "Trumbeak",
+      "name": "Tangrowth",
       "model": "./models/465.glb"
     },
     {
       "id": 466,
-      "name": "Toucannon",
+      "name": "Electivire",
       "model": "./models/466.glb"
     },
     {
       "id": 467,
-      "name": "Yungoos",
+      "name": "Magmortar",
       "model": "./models/467.glb"
     },
     {
       "id": 468,
-      "name": "Gumshoos",
+      "name": "Togekiss",
       "model": "./models/468.glb"
     },
     {
       "id": 469,
-      "name": "Grubbin",
+      "name": "Yanmega",
       "model": "./models/469.glb"
     },
     {
       "id": 470,
-      "name": "Charjabug",
+      "name": "Leafeon",
       "model": "./models/470.glb"
     },
     {
       "id": 471,
-      "name": "Vikavolt",
+      "name": "Glaceon",
       "model": "./models/471.glb"
     },
     {
       "id": 472,
-      "name": "Crabrawler",
+      "name": "Gliscor",
       "model": "./models/472.glb"
     },
     {
       "id": 473,
-      "name": "Crabominable",
+      "name": "Mamoswine",
       "model": "./models/473.glb"
     },
     {
       "id": 474,
-      "name": "Oricorio",
+      "name": "Porygon-Z",
       "model": "./models/474.glb"
     },
     {
       "id": 475,
-      "name": "Cutiefly",
+      "name": "Gallade",
       "model": "./models/475.glb"
     },
     {
       "id": 476,
-      "name": "Ribombee",
+      "name": "Probopass",
       "model": "./models/476.glb"
     },
     {
       "id": 477,
-      "name": "Rockruff",
+      "name": "Dusknoir",
       "model": "./models/477.glb"
     },
     {
       "id": 478,
-      "name": "Lycanroc",
+      "name": "Froslass",
       "model": "./models/478.glb"
     },
     {
       "id": 479,
-      "name": "Wishiwashi",
+      "name": "Rotom",
       "model": "./models/479.glb"
     },
     {
       "id": 480,
-      "name": "Mareanie",
+      "name": "Uxie",
       "model": "./models/480.glb"
     },
     {
       "id": 481,
-      "name": "Toxapex",
+      "name": "Mesprit",
       "model": "./models/481.glb"
     },
     {
       "id": 482,
-      "name": "Mudbray",
+      "name": "Azelf",
       "model": "./models/482.glb"
     },
     {
       "id": 483,
-      "name": "Mudsdale",
+      "name": "Dialga",
       "model": "./models/483.glb"
     },
     {
       "id": 484,
-      "name": "Deoxys",
+      "name": "Palkia",
       "model": "./models/484.glb"
     },
     {
       "id": 485,
-      "name": "Alola Raichu",
+      "name": "Heatran",
       "model": "./models/485.glb"
     },
     {
       "id": 486,
-      "name": "Sandshrew (Alola)",
+      "name": "Regigigas",
       "model": "./models/486.glb"
     },
     {
       "id": 487,
-      "name": "Sandslash (Alola)",
+      "name": "Giratina",
       "model": "./models/487.glb"
     },
     {
       "id": 488,
-      "name": "Meowth (Alola)",
+      "name": "Cresselia",
       "model": "./models/488.glb"
     },
     {
       "id": 489,
-      "name": "Persian (Alola)",
+      "name": "Phione",
       "model": "./models/489.glb"
     },
     {
       "id": 490,
-      "name": "Exeggutor (Alola)",
+      "name": "Manaphy",
       "model": "./models/490.glb"
     },
     {
       "id": 491,
-      "name": "Muk (Alola)",
+      "name": "Darkrai",
       "model": "./models/491.glb"
     },
     {
       "id": 492,
-      "name": "Zygarde (50% form)",
+      "name": "Shaymin",
       "model": "./models/492.glb"
     },
     {
       "id": 493,
-      "name": "Zygarde (Complete form)",
+      "name": "Arceus",
       "model": "./models/493.glb"
     },
     {
       "id": 494,
-      "name": "Solgaleo",
+      "name": "Victini",
       "model": "./models/494.glb"
     },
     {
       "id": 495,
-      "name": "Lunala",
+      "name": "Snivy",
       "model": "./models/495.glb"
     },
     {
       "id": 496,
-      "name": "Necrozma",
+      "name": "Servine",
       "model": "./models/496.glb"
     },
     {
       "id": 497,
-      "name": "Necrozma (Dusk Mane)",
+      "name": "Serperior",
       "model": "./models/497.glb"
     },
     {
       "id": 498,
-      "name": "Necrozma (Dawn Wings)",
+      "name": "Tepig",
       "model": "./models/498.glb"
     },
     {
       "id": 499,
-      "name": "Necrozma (Ultra)",
+      "name": "Pignite",
       "model": "./models/499.glb"
     },
     {
       "id": 500,
-      "name": "Magearna",
+      "name": "Emboar",
       "model": "./models/500.glb"
     },
     {
