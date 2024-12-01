@@ -15,7 +15,7 @@ function renderPokedex(pokemonList) {
     pokemonList.forEach(pokemon => {
         const card = document.createElement('div');
         card.classList.add('pokemon-card');
-        
+
         const modelViewer = document.createElement('model-viewer');
         modelViewer.setAttribute('camera-controls', '');
         modelViewer.setAttribute('auto-rotate', '');
@@ -24,6 +24,11 @@ function renderPokedex(pokemonList) {
         modelViewer.setAttribute('alt', `Model of ${pokemon.name}`);
         modelViewer.setAttribute('src', pokemon.model);
         card.appendChild(modelViewer);
+
+        const id = document.createElement('div');
+        id.classList.add('pokemon-id');
+        id.textContent = `ID: ${pokemon.id}`;
+        card.appendChild(id);
 
         const name = document.createElement('h2');
         name.textContent = pokemon.name;
