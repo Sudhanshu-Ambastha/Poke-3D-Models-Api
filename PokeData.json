@@ -3626,6 +3626,41 @@
       "model": "./models/725.glb"
     },
     {
+      "id": 726,
+      "name": "Torracat",
+      "model": "./models/726.glb"
+    },
+    {
+      "id": 727,
+      "name": "Incineroar",
+      "model": "./models/727.glb"
+    },
+    {
+      "id": 728,
+      "name": "Popplio",
+      "model": "./models/728.glb"
+    },
+    {
+      "id": 729,
+      "name": "Brionne",
+      "model": "./models/729.glb"
+    },
+    {
+      "id": 730,
+      "name": "Primarina",
+      "model": "./models/730.glb"
+    },
+    {
+      "id": 731,
+      "name": "Pikipek",
+      "model": "./models/731.glb"
+    },
+    {
+      "id": 732,
+      "name": "Trumbeak",
+      "model": "./models/732.glb"
+    },
+    {
       "id": 890,
       "name": "Eturnatus",
       "model": "./models/890.glb"
