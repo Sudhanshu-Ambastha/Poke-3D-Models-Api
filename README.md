@@ -95,4 +95,4 @@ While there are many **Pokémon APIs** available that provide Pokémon data (e.g
 
 This project is open source and available under the [MIT License](./LICENSE).
 
-[link for pokedex 500](https://en.wikipedia.org/wiki/List_of_Pok%C3%A9mon)
+<!-- [link for pokedex 500](https://en.wikipedia.org/wiki/List_of_Pok%C3%A9mon) -->
