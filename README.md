@@ -12,6 +12,8 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
   - [Contributing](#contributing)
     - [Steps to Contribute:](#steps-to-contribute)
   - [How to Add More Models](#how-to-add-more-models)
+  - [Checklist for Pokémon Models](#checklist-for-pokémon-models)
+    - [Symbol Key](#symbol-key)
   - [Note About APIs](#note-about-apis)
   - [License](#license)
   - [Contributors](#contributors)
@@ -84,6 +86,18 @@ To add new Pokémon models to the app, follow these steps:
     },
     ```
 3. **Ensure the Model is Hosted**: You can either host the model yourself or use an external link to the model file. Ensure the model is accessible from the project.
+
+## Checklist for Pokémon Models
+
+We are tracking the availability of Pokémon 3D models. View the full checklist here:  
+
+➡️ [Pokémon Model Checklist](./Pokemon%20List.xlsx)  
+
+### Symbol Key  
+Here’s what each symbol represents:  
+- ✅: Model is **Available** and does not need replacement.  
+- 🔂: Model **Needs to be Replaced** with a better version or updated.  
+- 🚫: Model is **Not Available** and must be added.  
 
 ## Note About APIs
 
