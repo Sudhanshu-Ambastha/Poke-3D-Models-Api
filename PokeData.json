@@ -513,7 +513,7 @@
     {
       "id": 103,
       "name": "Exeggutor",
-      "defaultModel": "./models/103.glb",
+      "model": "./models/103.glb",
       "forms": [
         { "formName": "Alolan", "model": "./models/alolan/103.glb" }
       ]
