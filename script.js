@@ -1,5 +1,17 @@
 let allPokemon = [];
 
+const generationRanges = {
+    1: [1, 151],
+    2: [152, 251],
+    3: [252, 386],
+    4: [387, 493],
+    5: [494, 649],
+    6: [650, 721],
+    7: [722, 809],
+    8: [810, 905],
+    9: [906, 1025]
+};
+
 fetch('./PokeData.json')
     .then(response => response.json())
     .then(data => {
@@ -40,6 +52,27 @@ function renderPokedex(pokemonList) {
     });
 }
 
+function filterByGen() {
+    const genFilter = document.getElementById('generationFilter').value;
+    const searchInput = document.getElementById('searchInput').value.toLowerCase();
+
+    let filteredPokemon = allPokemon;
+
+    if (genFilter && genFilter !== 'all') {
+        const [start, end] = generationRanges[genFilter];
+        filteredPokemon = filteredPokemon.filter(pokemon => pokemon.id >= start && pokemon.id <= end);
+    }
+
+    if (searchInput) {
+        filteredPokemon = filteredPokemon.filter(pokemon =>
+            pokemon.name.toLowerCase().includes(searchInput) || 
+            pokemon.id.toString().includes(searchInput)
+        );
+    }
+
+    renderPokedex(filteredPokemon);
+}
+
 function openModal(modelSrc) {
     const modal = document.getElementById('modelModal');
     const modelViewerModal = document.getElementById('modelViewerModal');
@@ -62,14 +95,6 @@ function closeModal() {
     modal.style.display = 'none';
 }
 
-function filterPokemon() {
-    const searchInput = document.getElementById('searchInput').value.toLowerCase();
-    const filteredPokemon = allPokemon.filter(pokemon => 
-        pokemon.name.toLowerCase().includes(searchInput) || 
-        pokemon.id.toString().includes(searchInput)
-    );
-    renderPokedex(filteredPokemon);
-}
-
-document.getElementById('searchInput').addEventListener('input', filterPokemon);
-document.getElementById('searchButton').addEventListener('click', filterPokemon);
+document.getElementById('generationFilter').addEventListener('change', filterByGen);
+document.getElementById('searchInput').addEventListener('input', filterByGen);
+document.getElementById('searchButton').addEventListener('click', filterByGen);
