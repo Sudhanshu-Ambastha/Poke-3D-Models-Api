@@ -517,7 +517,7 @@
       "forms": [
         { "formName": "Alolan", "model": "./models/alolan/103.glb" }
       ]
-    },
+    },  
     {
       "id": 104,
       "name": "Cubone",

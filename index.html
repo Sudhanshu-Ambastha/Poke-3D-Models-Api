@@ -101,13 +101,10 @@
             margin-bottom: 1rem;
         }
 
-
-
         .search-bar select,
         .search-bar input,
         .search-bar button {
             padding: 0.5rem;
-
             margin-left: 0.5rem;
             border-radius: 4px;
             font-size: 1rem;
@@ -123,13 +120,9 @@
         }
 
         .search-bar button {
-
-
             border: none;
-
             background-color: #4CAF50;
             color: white;
-
             cursor: pointer;
         }
 
@@ -151,17 +144,22 @@
 
     <div class="container">
         <div class="search-bar">
+            <select id="formFilter">
+                <option value="all">All Forms</option>
+                <option value="alolan">Alolan</option>
+                <option value="galarian">Galarian</option>
+                <option value="huisian">Huisian</option>
+                <option value="mega">Mega</option>
+                <option value="gmax">G-Max</option>
+                <option value="megax">Mega X</option>
+                <option value="megay">Mega Y</option>
+            </select>
             <select id="generationFilter">
                 <option value="all">All Generations</option>
                 <option value="1">Generation 1</option>
                 <option value="2">Generation 2</option>
                 <option value="3">Generation 3</option>
                 <option value="4">Generation 4</option>
-
-
-
-
-
                 <option value="5">Generation 5</option>
                 <option value="6">Generation 6</option>
                 <option value="7">Generation 7</option>
