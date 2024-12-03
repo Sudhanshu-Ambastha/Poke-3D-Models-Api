@@ -16,6 +16,7 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
   - [Checklist for Pokémon Models](#checklist-for-pokémon-models)
     - [Symbol Key](#symbol-key)
   - [Note About APIs](#note-about-apis)
+  - [Check Model Animations](#check-model-animations)
   - [License](#license)
   - [Contributors](#contributors)
 
@@ -123,6 +124,13 @@ While there are many **Pokémon APIs** available that provide Pokémon data (e.g
 
 - **Why don't these APIs provide 3D models?**: Providing 3D models requires significant storage and bandwidth. Models are often large in size (several MBs), and hosting them for free or for public use can be difficult due to storage and bandwidth limitations.
 - **Why don't we use other APIs?**: While you can retrieve detailed Pokémon information (like types, stats, and abilities) from APIs like [Pokémon API](https://pokeapi.co/), these services typically do not provide 3D models. As a result, it would be challenging to include those models in this app without substantial storage for model files.
+
+## Check Model Animations
+
+To verify whether a model contains animations or to inspect its structure, you can use the **[GLTF Viewer](https://gltf-viewer.donmccurdy.com/)**.  
+1. Upload your `.glb` or `.gltf` file to the viewer.  
+2. Check the **Animations** tab to confirm if any animations are included with the model.  
+3. Use this tool to test your models before adding them to the project.
 
 ## License
 
