@@ -12,6 +12,7 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
   - [Contributing](#contributing)
     - [Steps to Contribute:](#steps-to-contribute)
   - [How to Add More Models](#how-to-add-more-models)
+  - [Pokémon Categories and Counts](#pokémon-categories-and-counts)
   - [Checklist for Pokémon Models](#checklist-for-pokémon-models)
     - [Symbol Key](#symbol-key)
   - [Note About APIs](#note-about-apis)
@@ -86,6 +87,23 @@ To add new Pokémon models to the app, follow these steps:
     },
     ```
 3. **Ensure the Model is Hosted**: You can either host the model yourself or use an external link to the model file. Ensure the model is accessible from the project.
+
+## Pokémon Categories and Counts
+
+This app supports various Pokémon forms and categories. Below is a breakdown of the available Pokémon models and their counts:
+
+| **Category**       | **Available** | **Total** | **Description**                                                                 |
+|---------------------|---------------|-----------|---------------------------------------------------------------------------------|
+| **Regular Forms**   | 532             | 1025      | Standard Pokémon forms from Generations 1 to 9.                                |
+| **Shiny Forms**     | 5            | 1025      | Alternate color variants of all standard Pokémon.                              |
+| **Gigantamax**      | 1             | 32        | Special forms of select Pokémon with unique appearances in *Sword and Shield*. |
+| **Mega Evolutions** | 3             | 46        | Includes both single Mega forms and X/Y variants.                              |
+| **Hisuian Forms**   | 11             | 17        | Regional variants from *Pokémon Legends: Arceus*.                              |
+| **Alolan Forms**    | 4             | 18        | Regional variants introduced in *Pokémon Sun and Moon*.                        |
+| **Galarian Forms**  | 0             | 19        | Regional variants from *Pokémon Sword and Shield*.                             |
+| **Primal Forms**    | 1             | 2         | Primal Groudon and Primal Kyogre.                                              |
+
+---
 
 ## Checklist for Pokémon Models
 
