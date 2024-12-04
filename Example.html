@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Model Viewer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Pokémon 3D Model Viewer</h1>
+
+    <label for="pokemon-id">Enter Pokémon ID:</label>
+    <input type="number" id="pokemon-id" placeholder="Enter Pokémon ID" />
+    <button onclick="loadModel()">Load Pokémon Model</button>
+
+    <div id="viewer-container" style="margin-top: 20px;"></div>
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script>
+      const jsonUrl =
+        "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/PokeData.json";
+
+      let pokemonData = [];
+
+      // Function to fetch the Pokémon data
+      async function fetchPokemonData() {
+        try {
+          const response = await fetch(jsonUrl);
+          if (!response.ok) throw new Error("Failed to load JSON file");
+
+          const data = await response.json();
+          pokemonData = data.pokemon; // Assuming 'pokemon' array in JSON
+
+          console.log(pokemonData); // Debugging: check fetched data
+        } catch (error) {
+          console.error("Error fetching Pokémon data:", error);
+        }
+      }
+
+      // Function to load the model based on the entered ID
+      function loadModel() {
+        const viewerContainer = document.getElementById("viewer-container");
+        viewerContainer.innerHTML = ""; // Clear previous content
+
+        const id = parseInt(document.getElementById("pokemon-id").value, 10);
+
+        // Validate input and ensure ID is correct
+        if (isNaN(id)) {
+          viewerContainer.innerHTML = "<p>Please enter a valid ID!</p>";
+          return;
+        }
+
+        // Find the Pokémon with the matching ID
+        const selectedPokemon = pokemonData.find((p) => p.id === id);
+
+        if (!selectedPokemon) {
+          viewerContainer.innerHTML = "<p>Pokémon not found!</p>";
+          return;
+        }
+
+        // Create a model-viewer element dynamically
+        const modelViewer = document.createElement("model-viewer");
+        modelViewer.setAttribute(
+          "src",
+          `https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/${selectedPokemon.model}`
+        );
+        modelViewer.setAttribute("alt", `Model of ${selectedPokemon.name}`);
+        modelViewer.setAttribute("camera-controls", "");
+        modelViewer.setAttribute("auto-rotate", "");
+        modelViewer.setAttribute("environment-image", "neutral");
+        modelViewer.style.width = "500px";
+        modelViewer.style.height = "500px";
+
+        const nameLabel = document.createElement("h2");
+        nameLabel.textContent = selectedPokemon.name;
+
+        viewerContainer.appendChild(nameLabel);
+        viewerContainer.appendChild(modelViewer);
+      }
+
+      // Fetch Pokémon data when the page loads
+      window.onload = fetchPokemonData;
+    </script>
+  </body>
+</html>

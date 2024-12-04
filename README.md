@@ -13,11 +13,12 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
     - [Steps to Contribute:](#steps-to-contribute)
   - [How to Add More Models](#how-to-add-more-models)
   - [Pokémon Categories and Counts](#pokémon-categories-and-counts)
-  - [| **Unique Forms** | 2 | 3 | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus |](#-unique-forms--2--------------3----------ashs-greninja-armoured-mewtwo-eternamax-eternatus---------------------------------------)
+  - [| **Unique Forms** | 2             | 3         | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus                                       |](#-unique-forms--2--------------3----------ashs-greninja-armoured-mewtwo-eternamax-eternatus---------------------------------------)
   - [Checklist for Pokémon Models](#checklist-for-pokémon-models)
     - [Symbol Key](#symbol-key)
   - [Note About APIs](#note-about-apis)
   - [Check Model Animations](#check-model-animations)
+  - [Test the Viewer](#test-the-viewer)
   - [License](#license)
   - [Contributors](#contributors)
 
@@ -39,6 +40,19 @@ If you want to fetch Pokémon data from this project to use in your own applicat
 The Pokémon data is exposed as a JSON API. You can access it using the following URL:
 ```
 https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-Models/main/PokeData.json
+```
+
+You can use this endpoint to fetch the JSON data and use it in your applications to display Pokémon 3D models.
+
+Example of fetching data with JavaScript:
+```
+fetch('https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-Models/main/PokeData.json')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data); // Array of Pokémon data
+    // Use the data in your app
+  })
+  .catch(error => console.error('Error fetching data:', error));
 ```
 
 ## Contributing
@@ -132,6 +146,14 @@ To verify whether a model contains animations or to inspect its structure, you c
 1. Upload your `.glb` or `.gltf` file to the viewer.  
 2. Check the **Animations** tab to confirm if any animations are included with the model.  
 3. Use this tool to test your models before adding them to the project.
+
+## Test the Viewer
+
+Additionally, you can test the model viewer with the **Example.html** file included in the project. This file allows you to input a Pokémon ID and see if the 3D model is fetched from the api and displayed correctly in the browser.
+
+To use this, simply open the `Example.html` file in your browser, enter a Pokémon ID, and click **Load Pokémon Model**. The viewer will fetch the 3D model from the API and display it. This serves as a test to ensure that the models are being fetched correctly and can also give you an idea of how to fetch and display Pokémon models in your own projects.
+
+By using this example, you can verify if the API is working as expected and get familiar with how to integrate and display Pokémon 3D models in your app.
 
 ## License
 
