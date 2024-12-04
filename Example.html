@@ -3,83 +3,162 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dynamic Model Viewer</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Pokédex 3D Viewer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 20px;
+      }
+
+      main {
+        margin: 20px;
+      }
+
+      .search-container {
+        margin-bottom: 20px;
+      }
+
+      input[type="number"] {
+        padding: 10px;
+        width: 200px;
+        margin-right: 10px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      .viewer-container {
+        margin-top: 20px;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      p {
+        font-size: 16px;
+        color: #555;
+      }
+    </style>
   </head>
   <body>
-    <h1>Pokémon 3D Model Viewer</h1>
+    <header>
+      <h1>Pokédex 3D Viewer</h1>
+    </header>
 
-    <label for="pokemon-id">Enter Pokémon ID:</label>
-    <input type="number" id="pokemon-id" placeholder="Enter Pokémon ID" />
-    <button onclick="loadModel()">Load Pokémon Model</button>
+    <main>
+      <div class="search-container">
+        <label for="pokemon-id">Enter Pokémon ID:</label>
+        <input type="number" id="pokemon-id" placeholder="Enter Pokémon ID" />
+        <button onclick="loadPokemon()">Search</button>
+      </div>
 
-    <div id="viewer-container" style="margin-top: 20px;"></div>
+      <div id="viewer-container" class="viewer-container"></div>
+    </main>
 
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <script>
-      const jsonUrl =
+      const modelApiUrl =
         "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/PokeData.json";
+      const pokeApiBaseUrl = "https://pokeapi.co/api/v2/pokemon/";
 
       let pokemonData = [];
 
-      // Function to fetch the Pokémon data
-      async function fetchPokemonData() {
+      async function fetchModelData() {
         try {
-          const response = await fetch(jsonUrl);
-          if (!response.ok) throw new Error("Failed to load JSON file");
+          const response = await fetch(modelApiUrl);
+          if (!response.ok) throw new Error("Failed to load 3D models data");
 
           const data = await response.json();
-          pokemonData = data.pokemon; // Assuming 'pokemon' array in JSON
+          pokemonData = data.pokemon;
 
-          console.log(pokemonData); // Debugging: check fetched data
+          console.log("3D Model Data:", pokemonData);
         } catch (error) {
-          console.error("Error fetching Pokémon data:", error);
+          console.error("Error fetching 3D model data:", error);
         }
       }
 
-      // Function to load the model based on the entered ID
-      function loadModel() {
+      async function fetchPokemonDetails(id) {
+        try {
+          const response = await fetch(`${pokeApiBaseUrl}${id}`);
+          if (!response.ok) throw new Error("Failed to fetch Pokémon details");
+
+          const data = await response.json();
+
+          return {
+            name: data.name,
+            height: data.height / 10,
+            weight: data.weight / 10,
+            types: data.types.map((type) => type.type.name),
+          };
+        } catch (error) {
+          console.error("Error fetching Pokémon details:", error);
+          return null;
+        }
+      }
+
+      async function loadPokemon() {
         const viewerContainer = document.getElementById("viewer-container");
-        viewerContainer.innerHTML = ""; // Clear previous content
+        viewerContainer.innerHTML = "";
 
         const id = parseInt(document.getElementById("pokemon-id").value, 10);
 
-        // Validate input and ensure ID is correct
-        if (isNaN(id)) {
-          viewerContainer.innerHTML = "<p>Please enter a valid ID!</p>";
+        if (isNaN(id) || id <= 0) {
+          viewerContainer.innerHTML = "<p>Please enter a valid Pokémon ID!</p>";
           return;
         }
 
-        // Find the Pokémon with the matching ID
         const selectedPokemon = pokemonData.find((p) => p.id === id);
-
         if (!selectedPokemon) {
-          viewerContainer.innerHTML = "<p>Pokémon not found!</p>";
+          viewerContainer.innerHTML = "<p>3D Model not found for this Pokémon!</p>";
           return;
         }
 
-        // Create a model-viewer element dynamically
+        const pokemonDetails = await fetchPokemonDetails(id);
+        if (!pokemonDetails) {
+          viewerContainer.innerHTML = "<p>Pokémon details not found!</p>";
+          return;
+        }
+
         const modelViewer = document.createElement("model-viewer");
-        modelViewer.setAttribute(
-          "src",
-          `https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/${selectedPokemon.model}`
-        );
-        modelViewer.setAttribute("alt", `Model of ${selectedPokemon.name}`);
+        modelViewer.setAttribute("src", selectedPokemon.model);
+        modelViewer.setAttribute("alt", `3D Model of ${pokemonDetails.name}`);
         modelViewer.setAttribute("camera-controls", "");
         modelViewer.setAttribute("auto-rotate", "");
         modelViewer.setAttribute("environment-image", "neutral");
         modelViewer.style.width = "500px";
         modelViewer.style.height = "500px";
 
-        const nameLabel = document.createElement("h2");
-        nameLabel.textContent = selectedPokemon.name;
+        const details = `
+          <h2>${pokemonDetails.name.toUpperCase()}</h2>
+          <p><strong>Types:</strong> ${pokemonDetails.types.join(", ")}</p>
+          <p><strong>Height:</strong> ${pokemonDetails.height} m</p>
+          <p><strong>Weight:</strong> ${pokemonDetails.weight} kg</p>
+        `;
 
-        viewerContainer.appendChild(nameLabel);
+        viewerContainer.innerHTML = details;
         viewerContainer.appendChild(modelViewer);
       }
 
-      // Fetch Pokémon data when the page loads
-      window.onload = fetchPokemonData;
+      window.onload = fetchModelData;
     </script>
   </body>
 </html>
