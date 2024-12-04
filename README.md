@@ -13,7 +13,7 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
     - [Steps to Contribute:](#steps-to-contribute)
   - [How to Add More Models](#how-to-add-more-models)
   - [Pokémon Categories and Counts](#pokémon-categories-and-counts)
-  - [| **Unique Forms** | 2             | 3         | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus                                       |](#-unique-forms--2--------------3----------ashs-greninja-armoured-mewtwo-eternamax-eternatus---------------------------------------)
+  - [| **Unique Forms** | 2 | 3 | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus |](#-unique-forms--2--------------3----------ashs-greninja-armoured-mewtwo-eternamax-eternatus---------------------------------------)
   - [Checklist for Pokémon Models](#checklist-for-pokémon-models)
     - [Symbol Key](#symbol-key)
   - [Note About APIs](#note-about-apis)
