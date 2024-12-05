@@ -14,7 +14,7 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
   - [How to Add More Models](#how-to-add-more-models)
   - [Dependencies](#dependencies)
   - [Pokémon Categories and Counts](#pokémon-categories-and-counts)
-  - [| **Unique Forms** | 2             | 3         | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus                                       |](#-unique-forms--2--------------3----------ashs-greninja-armoured-mewtwo-eternamax-eternatus---------------------------------------)
+  - [| **Shadow Forms** | 1             | 131         | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus                              |](#-shadow-forms--1--------------131----------ashs-greninja-armoured-mewtwo-eternamax-eternatus------------------------------)
   - [Checklist for Pokémon Models](#checklist-for-pokémon-models)
     - [Symbol Key](#symbol-key)
   - [Note About APIs](#note-about-apis)
@@ -118,15 +118,17 @@ This app supports various Pokémon forms and categories. Below is a breakdown of
 
 | **Category**       | **Available** | **Total** | **Description**                                                                 |
 |---------------------|---------------|-----------|---------------------------------------------------------------------------------|
-| **Regular Forms**   | 562             | 1025      | Standard Pokémon forms from Generations 1 to 9.                                |
+| **Regular Forms**   | 564             | 1025      | Standard Pokémon forms from Generations 1 to 9.                                |
 | **Shiny Forms**     | 5            | 1025      | Alternate color variants of all standard Pokémon.                              |
-| **Gigantamax**      | 1             | 32        | Special forms of select Pokémon with unique appearances in *Sword and Shield*. |
-| **Mega Evolutions** | 10             | 46        | Includes both single Mega forms and X/Y variants.                              |
+| **Gigantamax**      | 2             | 32        | Special forms of select Pokémon with unique appearances in *Sword and Shield*. |
+| **Mega Evolutions** | 11             | 48        | Includes both single Mega forms and X/Y variants.                              |
+| **MegaShiny Evolutions** | 1         | 48        | Includes both single Mega forms and X/Y variants.                              |
 | **Hisuian Forms**   | 11             | 17        | Regional variants from *Pokémon Legends: Arceus*.                              |
 | **Alolan Forms**    | 5             | 18        | Regional variants introduced in *Pokémon Sun and Moon*.                        |
-| **Galarian Forms**  | 1             | 19        | Regional variants from *Pokémon Sword and Shield*.                             |
-| **Primal Forms**    | 1             | 2         | Primal Groudon and Primal Kyogre.                                              |
-| **Unique Forms** | 2             | 3         | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus                                       |
+| **Galarian Forms**  | 3             | 19        | Regional variants from *Pokémon Sword and Shield*.                             |
+| **Primal Forms**    | 2             | 2         | Primal Groudon and Primal Kyogre.                                              |
+| **Unique Forms** | 2             | 3         | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus                              |
+| **Shadow Forms** | 1             | 131         | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus                              |
 ---
 
 ## Checklist for Pokémon Models
