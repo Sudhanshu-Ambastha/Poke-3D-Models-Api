@@ -107,7 +107,9 @@ To add new Pokémon models to the app, follow these steps:
 
 ## Dependencies
 ```
+cd test
 npm init -y && npm install express mongoose body-parser cors
+node server.js
 ```
 
 ## Pokémon Categories and Counts
