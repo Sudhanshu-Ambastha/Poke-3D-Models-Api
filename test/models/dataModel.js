@@ -1,4 +1,4 @@
 const mongoose = require('mongoose');
 
-const dataSchema = new mongoose.Schema({}, { strict: false }); // Flexible schema
+const dataSchema = new mongoose.Schema({}, { strict: false }); 
 module.exports = mongoose.model('Data', dataSchema);
