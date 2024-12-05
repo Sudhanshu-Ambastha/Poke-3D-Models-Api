@@ -6,7 +6,7 @@ const PORT = 3000;
 
 app.use(cors()); 
 
-mongoose.connect('mongodb://localhost:27017/PokeData', {
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })

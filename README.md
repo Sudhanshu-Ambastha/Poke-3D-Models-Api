@@ -27,7 +27,7 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
 ## Features
 - View Pokémon in 3D directly in the browser.
 - Click on a Pokémon to preview its 3D model in a modal view.
-- The app fetches Pokémon data dynamically from a JSON file, displaying it in a grid layout.
+- The app fetches Pokémon data dynamically from a JSON file or MongoDB, displaying it in a grid layout.
 - Easy to extend by adding new Pokémon 3D models.
 
 ---
