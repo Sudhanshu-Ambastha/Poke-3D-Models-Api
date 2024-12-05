@@ -12,6 +12,7 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
   - [Contributing](#contributing)
     - [Steps to Contribute:](#steps-to-contribute)
   - [How to Add More Models](#how-to-add-more-models)
+  - [Dependencies](#dependencies)
   - [Pokémon Categories and Counts](#pokémon-categories-and-counts)
   - [| **Unique Forms** | 2             | 3         | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus                                       |](#-unique-forms--2--------------3----------ashs-greninja-armoured-mewtwo-eternamax-eternatus---------------------------------------)
   - [Checklist for Pokémon Models](#checklist-for-pokémon-models)
@@ -103,6 +104,12 @@ To add new Pokémon models to the app, follow these steps:
     },
     ```
 3. **Ensure the Model is Hosted**: You can either host the model yourself or use an external link to the model file. Ensure the model is accessible from the project.
+
+## Dependencies
+```
+npm init -y
+npm install express mongoose body-parser cors
+```
 
 ## Pokémon Categories and Counts
 
