@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Models</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px;
+            color: #333;
+        }
+
+        .pokemon-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .pokemon-item {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            width: 280px;
+            text-align: center;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .pokemon-item:hover {
+            transform: scale(1.05);
+        }
+
+        model-viewer {
+            width: 100%;
+            height: 300px;
+            background-color: #f0f0f0;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        .loading {
+            text-align: center;
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pokémon 3D Models</h1>
+    <div class="loading" id="loading">Loading Pokémon Models...</div>
+    <div class="pokemon-list" id="pokemon-list"></div>
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <script>
+    fetch('http://localhost:3000/api/data')
+        .then(response => response.json())
+        .then(data => {
+            const pokemonListElement = document.getElementById('pokemon-list');
+            const loadingElement = document.getElementById('loading');
+            loadingElement.style.display = 'none';
+
+            data.forEach(item => {
+                item.pokemon.forEach(pokemon => {
+                    const pokemonElement = document.createElement('div');
+                    pokemonElement.classList.add('pokemon-item');
+
+                    const modelSrc = pokemon.model ? pokemon.model.replace('github.com', 'raw.githubusercontent.com').replace('/blob', '') : '';
+                    const hasModel = modelSrc ? '' : 'class="error"'; 
+
+                    pokemonElement.innerHTML = `
+                        <h3>${pokemon.name}</h3>
+                        <!-- Display 3D Model -->
+                        <model-viewer src="${modelSrc}" alt="${pokemon.name} 3D model" auto-rotate camera-controls ${hasModel}></model-viewer>
+                        <br>
+                        ${hasModel ? '<span class="error">Model not available</span>' : ''}
+                        <a href="${modelSrc}" target="_blank" ${modelSrc ? '' : 'style="display: none;"'}>View Full Model</a>
+                    `;
+
+                    pokemonListElement.appendChild(pokemonElement);
+                });
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            const loadingElement = document.getElementById('loading');
+            loadingElement.style.display = 'none'; 
+            document.getElementById('pokemon-list').innerHTML = '<p class="error">Failed to load Pokémon models. Please try again later.</p>';
+        });
+    </script>
+</body>
+</html>
