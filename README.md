@@ -14,7 +14,7 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
   - [How to Add More Models](#how-to-add-more-models)
   - [Dependencies](#dependencies)
   - [Pokémon Categories and Counts](#pokémon-categories-and-counts)
-  - [| **Shadow Forms** | 1             | 131         | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus                              |](#-shadow-forms--1--------------131----------ashs-greninja-armoured-mewtwo-eternamax-eternatus------------------------------)
+  - [| **Fusion Forms** | 1 | 6 | Kyurem (black/white), Necrozma (Dusk Mane/Dawn Wings), Calyrex (Ice Rider/Shadow Rider)           |](#-fusion-forms--1--6--kyurem-blackwhite-necrozma-dusk-manedawn-wings-calyrex-ice-ridershadow-rider-----------)
   - [Checklist for Pokémon Models](#checklist-for-pokémon-models)
     - [Symbol Key](#symbol-key)
   - [Note About APIs](#note-about-apis)
@@ -128,7 +128,8 @@ This app supports various Pokémon forms and categories. Below is a breakdown of
 | **Galarian Forms**  | 5             | 19        | Regional variants from *Pokémon Sword and Shield*.                             |
 | **Primal Forms**    | 2             | 2         | Primal Groudon and Primal Kyogre.                                              |
 | **Unique Forms** | 3             | 4         | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus, Ultra Necrozma              |
-| Shadow Forms | 1 | 131 | Dark, corrupted versions of Pokémon often seen in Pokémon Colosseum and XD: Gale of Darkness.           |
+| **Shadow Forms** | 1 | 131 | Dark, corrupted versions of Pokémon often seen in Pokémon Colosseum and XD: Gale of Darkness.           |
+| **Fusion Forms** | 1 | 6 | Kyurem (black/white), Necrozma (Dusk Mane/Dawn Wings), Calyrex (Ice Rider/Shadow Rider)           |
 ---
 
 ## Checklist for Pokémon Models
