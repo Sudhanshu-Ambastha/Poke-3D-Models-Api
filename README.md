@@ -127,8 +127,8 @@ This app supports various Pokémon forms and categories. Below is a breakdown of
 | **Alolan Forms**    | 5             | 18        | Regional variants introduced in *Pokémon Sun and Moon*.                        |
 | **Galarian Forms**  | 5             | 19        | Regional variants from *Pokémon Sword and Shield*.                             |
 | **Primal Forms**    | 2             | 2         | Primal Groudon and Primal Kyogre.                                              |
-| **Unique Forms** | 3             | 4         | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus, Ultra Necrozma                          |
-| **Shadow Forms** | 1             | 131         | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus                              |
+| **Unique Forms** | 3             | 4         | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus, Ultra Necrozma              |
+| Shadow Forms | 1 | 131 | Dark, corrupted versions of Pokémon often seen in Pokémon Colosseum and XD: Gale of Darkness.           |
 ---
 
 ## Checklist for Pokémon Models
