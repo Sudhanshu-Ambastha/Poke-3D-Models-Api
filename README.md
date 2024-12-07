@@ -14,7 +14,7 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
   - [How to Add More Models](#how-to-add-more-models)
   - [Dependencies](#dependencies)
   - [Pokémon Categories and Counts](#pokémon-categories-and-counts)
-  - [| **Fusion Forms** | 1 | 6 | Kyurem (black/white), Necrozma (Dusk Mane/Dawn Wings), Calyrex (Ice Rider/Shadow Rider)           |](#-fusion-forms--1--6--kyurem-blackwhite-necrozma-dusk-manedawn-wings-calyrex-ice-ridershadow-rider-----------)
+  - [| **Origin Forms** | 3 | 3 | Origin Forms represent the true or primal state of certain legendary Pokémon, showcasing their full power and unique design. i.e  Giratina, and Dialga/Palkia.          |](#-origin-forms--3--3--origin-forms-represent-the-true-or-primal-state-of-certain-legendary-pokémon-showcasing-their-full-power-and-unique-design-ie--giratina-and-dialgapalkia----------)
   - [Checklist for Pokémon Models](#checklist-for-pokémon-models)
     - [Symbol Key](#symbol-key)
   - [Note About APIs](#note-about-apis)
@@ -130,6 +130,7 @@ This app supports various Pokémon forms and categories. Below is a breakdown of
 | **Unique Forms** | 3             | 4         | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus, Ultra Necrozma              |
 | **Shadow Forms** | 1 | 131 | Dark, corrupted versions of Pokémon often seen in Pokémon Colosseum and XD: Gale of Darkness.           |
 | **Fusion Forms** | 1 | 6 | Kyurem (black/white), Necrozma (Dusk Mane/Dawn Wings), Calyrex (Ice Rider/Shadow Rider)           |
+| **Origin Forms** | 3 | 3 | Origin Forms represent the true or primal state of certain legendary Pokémon, showcasing their full power and unique design. i.e  Giratina, and Dialga/Palkia.          |
 ---
 
 ## Checklist for Pokémon Models
