@@ -119,15 +119,15 @@ This app supports various Pokémon forms and categories. Below is a breakdown of
 | **Category**       | **Available** | **Total** | **Description**                                                                 |
 |---------------------|---------------|-----------|---------------------------------------------------------------------------------|
 | **Regular Forms**   | 808            | 1025      | Standard Pokémon forms from Generations 1 to 9.                                |
-| **Shiny Forms**     | 7            | 1025      | Alternate color variants of all standard Pokémon.                              |
+| **Shiny Forms**     | 28            | 1025      | Alternate color variants of all standard Pokémon.                              |
 | **Gigantamax**      | 2             | 32        | Special forms of select Pokémon with unique appearances in *Sword and Shield*. |
-| **Mega Evolutions** | 11             | 48        | Includes both single Mega forms and X/Y variants.                              |
-| **MegaShiny Evolutions** | 1         | 48        | Includes both single Mega forms and X/Y variants.                              |
+| **Mega Evolutions** | 15             | 48        | Includes both single Mega forms and X/Y variants.                              |
+| **MegaShiny Evolutions** | 2         | 48        | Includes both single Mega forms and X/Y variants.                              |
 | **Hisuian Forms**   | 11             | 17        | Regional variants from *Pokémon Legends: Arceus*.                              |
 | **Alolan Forms**    | 5             | 18        | Regional variants introduced in *Pokémon Sun and Moon*.                        |
-| **Galarian Forms**  | 3             | 19        | Regional variants from *Pokémon Sword and Shield*.                             |
+| **Galarian Forms**  | 5             | 19        | Regional variants from *Pokémon Sword and Shield*.                             |
 | **Primal Forms**    | 2             | 2         | Primal Groudon and Primal Kyogre.                                              |
-| **Unique Forms** | 2             | 3         | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus                              |
+| **Unique Forms** | 3             | 4         | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus, Ultra Necrozma                          |
 | **Shadow Forms** | 1             | 131         | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus                              |
 ---
 
