@@ -130,11 +130,80 @@
             background-color: #45a049;
         }
 
-        @media (max-width: 600px) {
-            #modalContent {
-                width: 90%;
-            }
-        }
+        @media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 0.8rem;
+    }
+
+    .container {
+        padding: 0.5rem;
+    }
+
+    .pokedex {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 0.5rem;
+    }
+
+    .pokemon-card {
+        padding: 0.5rem;
+    }
+
+    .pokemon-card h2 {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    .pokemon-card .pokemon-id {
+        font-size: 0.9rem;
+    }
+
+    .pokemon-card model-viewer {
+        height: 200px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .search-bar select,
+    .search-bar input,
+    .search-bar button {
+        width: 100%;
+        font-size: 0.9rem;
+        margin-left: 0;
+    }
+
+    .search-bar input {
+        padding: 0.4rem;
+    }
+
+    .search-bar button {
+        padding: 0.5rem;
+    }
+
+    #modalContent {
+        margin: 10% auto;
+        width: 90%;
+        padding: 1rem;
+    }
+
+    #modelViewerModal {
+        height: 250px;
+    }
+
+    .close {
+        font-size: 25px;
+        top: 5px;
+        right: 10px;
+    }
+}
+ 
     </style>
 </head>
 <body>

@@ -1,0 +1,164 @@
+{
+  "forms": [
+    {
+      "id": 3,
+      "name": "Venusaur",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/3.glb"
+    },
+    {
+      "id": 6,
+      "name": "Charizard",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/6.glb"
+    },
+    {
+      "id": 9,
+      "name": "Blastoise",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/9.glb"
+    },
+    {
+      "id": 12,
+      "name": "Butterfree",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/12.glb"
+    },
+    {
+      "id": 25,
+      "name": "Pikachu",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/25.glb"
+    },
+    {
+      "id": 52,
+      "name": "Meowth",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/52.glb"
+    },
+    {
+      "id": 68,
+      "name": "Machamp",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/68.glb"
+    },
+    {
+      "id": 94,
+      "name": "Gengar",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/94.glb"
+    },
+    {
+      "id": 99,
+      "name": "Kingler",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/99.glb"
+    },
+    {
+      "id": 131,
+      "name": "Lapras",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/131.glb"
+    },
+    {
+      "id": 133,
+      "name": "Eevee",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/133.glb"
+    },
+    {
+      "id": 143,
+      "name": "Snorlax",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/143.glb"
+    },
+    {
+      "id": 569,
+      "name": "Garbodor",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/569.glb"
+    },
+    {
+      "id": 809,
+      "name": "Melmetal",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/809.glb"
+    },
+    {
+      "id": 812,
+      "name": "Rillaboom",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/812.glb"
+    },
+    {
+      "id": 815,
+      "name": "Cinderace",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/815.glb"
+    },
+    {
+      "id": 818,
+      "name": "Inteleon",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/818.glb"
+    },
+    {
+      "id": 823,
+      "name": "Corviknight",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/823.glb"
+    },
+    {
+      "id": 826,
+      "name": "Orbeetle",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/826.glb"
+    },
+    {
+      "id": 834,
+      "name": "Drednaw",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/834.glb"
+    },
+    {
+      "id": 839,
+      "name": "Coalossal",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/839.glb"
+    },
+    {
+      "id": 841,
+      "name": "Flapple",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/841.glb"
+    },
+    {
+      "id": 842,
+      "name": "Appletun",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/842.glb"
+    },
+    {
+      "id": 844,
+      "name": "Sandaconda",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/844.glb"
+    },
+    {
+      "id": 849,
+      "name": "Toxtricity",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/849.glb"
+    },
+    {
+      "id": 851,
+      "name": "Centiskorch",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/851.glb"
+    },
+    {
+      "id": 858,
+      "name": "Hatterene",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/858.glb"
+    },
+    {
+      "id": 861,
+      "name": "Grimmsnarl",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/861.glb"
+    },
+    {
+      "id": 869,
+      "name": "Alcremie",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/869.glb"
+    },
+    {
+      "id": 879,
+      "name": "Copperajah",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/879.glb"
+    },
+    {
+      "id": 884,
+      "name": "Duraludon",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/884.glb"
+    },
+    {
+      "id": 892,
+      "name": "Urshifu",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/gmax/892.glb"
+    }
+  ]
+}
