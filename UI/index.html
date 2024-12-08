@@ -135,7 +135,7 @@
             renderPokemonList(filteredData);
         }
 
-        fetch('https://poke-3-d-models-api.vercel.app/')
+        fetch('http://localhost:3000/api/data')
             .then(response => response.json())
             .then(data => {
                 const loadingElement = document.getElementById('loading');
