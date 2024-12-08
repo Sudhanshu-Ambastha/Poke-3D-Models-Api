@@ -50,8 +50,7 @@ Example of fetching data with JavaScript:
 fetch('https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-Models/main/PokeData.json')
   .then(response => response.json())
   .then(data => {
-    console.log(data); // Array of Pokémon data
-    // Use the data in your app
+    console.log(data); 
   })
   .catch(error => console.error('Error fetching data:', error));
 ```
