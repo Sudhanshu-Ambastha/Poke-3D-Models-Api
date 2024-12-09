@@ -1,0 +1,18 @@
+[
+  {
+    "id": 6,
+    "name": "Charizard",
+    "models": {
+      "x": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/x/6.glb",
+      "y": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/y/6.glb"
+    }
+  },
+  {
+    "id": 150,
+    "name": "Mewtwo",
+    "models": {
+      "x": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/x/150.glb",
+      "y": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/y/150.glb"
+    }
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "id": 58,
+    "name": "Hisuian Growlithe",
+    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/58.glb"
+  },
+  {
+    "id": 59,
+    "name": "Hisuian Arcanine",
+    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/59.glb"
+  },
+  {
+    "id": 100,
+    "name": "Hisuian Voltorb",
+    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/100.glb"
+  },
+  {
+    "id": 101,
+    "name": "Hisuian Electrode",
+    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/101.glb"
+  },
+  {
+    "id": 157,
+    "name": "Hisuian Typhlosion",
+    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/157.glb"
+  },
+  {
+    "id": 211,
+    "name": "Hisuian Qwilfish",
+    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/211.glb"
+  },
+  {
+    "id": 215,
+    "name": "Hisuian Sneasel",
+    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/215.glb"
+  },
+  {
+    "id": 903,
+    "name": "Hisuian Sneasler",
+    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/903.glb"
+  },
+  {
+    "id": 503,
+    "name": "Hisuian Samurott",
+    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/503.glb"
+  },
+  {
+    "id": 549,
+    "name": "Hisuian Lilligant",
+    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/549.glb"
+  },
+  {
+    "id": 570,
+    "name": "Hisuian Zorua",
+    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/570.glb"
+  },
+  {
+    "id": 571,
+    "name": "Hisuian Zoroark",
+    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/571.glb"
+  },
+  {
+    "id": 628,
+    "name": "Hisuian Braviary",
+    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/628.glb"
+  },
+  {
+    "id": 705,
+    "name": "Hisuian Sliggoo",
+    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/705.glb"
+  },
+  {
+    "id": 706,
+    "name": "Hisuian Goodra",
+    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/706.glb"
+  },
+  {
+    "id": 713,
+    "name": "Hisuian Avalugg",
+    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/713.glb"
+  },
+  {
+    "id": 724,
+    "name": "Hisuian Decidueye",
+    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/724.glb"
+  }
+]
