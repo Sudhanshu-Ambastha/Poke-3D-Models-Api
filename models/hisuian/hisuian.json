@@ -33,12 +33,7 @@
     "id": 215,
     "name": "Hisuian Sneasel",
     "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/215.glb"
-  },
-  {
-    "id": 903,
-    "name": "Hisuian Sneasler",
-    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/903.glb"
-  },
+  }, 
   {
     "id": 503,
     "name": "Hisuian Samurott",
@@ -83,5 +78,10 @@
     "id": 724,
     "name": "Hisuian Decidueye",
     "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/724.glb"
+  },
+  {
+    "id": 903,
+    "name": "Hisuian Sneasler",
+    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/903.glb"
   }
 ]
