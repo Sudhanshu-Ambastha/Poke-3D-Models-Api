@@ -3340,9 +3340,14 @@
     },
     {
       "id": 668,
-      "name": "Pyroar",
-      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/regular/668.glb"
+      "name": "Pyroar-Male",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/regular/668-M.glb"
     },
+    {
+      "id": 668,
+      "name": "Pyroar-Female",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/regular/668-F.glb"
+    },    
     {
       "id": 669,
       "name": "Flabébé",
