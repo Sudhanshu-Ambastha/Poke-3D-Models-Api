@@ -122,7 +122,7 @@ This app supports various Pokémon forms and categories. Below is a breakdown of
 | **Gigantamax**      | 4             | 32        | Special forms of select Pokémon with unique appearances in *Sword and Shield*. |
 | **Mega Evolutions** | 17             | 48        | Includes both single Mega forms and X/Y variants.                              |
 | **MegaShiny Evolutions** | 3         | 48        | Includes both single Mega forms and X/Y variants.                              |
-| **Hisuian Forms**   | 13             | 17        | Regional variants from *Pokémon Legends: Arceus*.                              |
+| **Hisuian Forms**   | 14             | 17        | Regional variants from *Pokémon Legends: Arceus*.                              |
 | **Alolan Forms**    | 6             | 18        | Regional variants introduced in *Pokémon Sun and Moon*.                        |
 | **Galarian Forms**  | 6             | 19        | Regional variants from *Pokémon Sword and Shield*.                             |
 | **Primal Forms**    | 2             | 2         | Primal Groudon and Primal Kyogre.                                              |
