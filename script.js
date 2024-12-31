@@ -79,7 +79,7 @@ function openModal(modelSrc) {
     
     modelViewerModal.setAttribute('camera-controls', '');
     modelViewerModal.setAttribute('auto-rotate', '');
-    modelViewerModal.setAttribute('animation-name', 'Idle');
+    modelViewer.setAttribute('autoplay', ''); 
     modelViewerModal.setAttribute('environment-image', 'neutral');
     modelViewerModal.setAttribute('src', modelSrc);
 
