@@ -31,7 +31,7 @@ function renderPokedex(pokemonList) {
         const modelViewer = document.createElement('model-viewer');
         modelViewer.setAttribute('camera-controls', '');
         modelViewer.setAttribute('auto-rotate', '');
-        modelViewer.setAttribute('animation-name', 'Idle');
+        modelViewer.setAttribute('autoplay', ''); 
         modelViewer.setAttribute('environment-image', 'neutral');
         modelViewer.setAttribute('alt', `Model of ${pokemon.name}`);
         modelViewer.setAttribute('src', pokemon.model);
@@ -98,3 +98,5 @@ function closeModal() {
 document.getElementById('generationFilter').addEventListener('change', filterByGen);
 document.getElementById('searchInput').addEventListener('input', filterByGen);
 document.getElementById('searchButton').addEventListener('click', filterByGen);
+document.getElementById('modelModal').addEventListener('click', closeModal);
+document.getElementById('modalContent').addEventListener('click', event => event.stopPropagation());
