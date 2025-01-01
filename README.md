@@ -14,6 +14,7 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
   - [How to Add More Models](#how-to-add-more-models)
   - [Dependencies](#dependencies)
   - [Pokémon Categories and Counts](#pokémon-categories-and-counts)
+  - [| **Origin Forms** | 3 | 3 | Origin Forms represent the true or primal state of certain legendary Pokémon, showcasing their full power and unique design. i.e  Giratina, and Dialga/Palkia.          |](#-origin-forms--3--3--origin-forms-represent-the-true-or-primal-state-of-certain-legendary-pokémon-showcasing-their-full-power-and-unique-design-ie--giratina-and-dialgapalkia----------)
   - [Checklist for Pokémon Models](#checklist-for-pokémon-models)
     - [Symbol Key](#symbol-key)
   - [Note About APIs](#note-about-apis)
@@ -117,7 +118,7 @@ This app supports various Pokémon forms and categories. Below is a breakdown of
 | **Category**       | **Available** | **Total** | **Description**                                                                 |
 |---------------------|---------------|-----------|---------------------------------------------------------------------------------|
 | **Regular Forms**   | 860            | 1025      | Standard Pokémon forms from Generations 1 to 9.                                |
-| **Shiny Forms**     | 32            | 1025      | Alternate color variants of all standard Pokémon.                              |
+| **Shiny Forms**     | 34            | 1025      | Alternate color variants of all standard Pokémon.                              |
 | **Gigantamax**      | 4             | 32        | Special forms of select Pokémon with unique appearances in *Sword and Shield*. |
 | **Mega Evolutions** | 17             | 48        | Includes both single Mega forms and X/Y variants.                              |
 | **MegaShiny Evolutions** | 3         | 48        | Includes both single Mega forms and X/Y variants.                              |
