@@ -153,14 +153,14 @@ While there are many **Pokémon APIs** available that provide Pokémon data (e.g
 
 ## Check Model Animations
 
-To verify whether a model contains animations or to inspect its structure, you can use the **[GLTF Viewer](https://gltf-viewer.donmccurdy.com/)**.  
-1. Upload your `.glb` or `.gltf` file to the viewer.  
-2. Check the **Animations** tab to confirm if any animations are included with the model.  
-3. Use this tool to test your models before adding them to the project.
+To verify whether a model contains animations or to inspect its structure, you can use the **[3D Preview](https://marketplace.visualstudio.com/items?itemName=mohitkumartoshniwal.3d-preview)** extension in Visual Studio Code. This extension allows you to preview 3D models directly in the editor, making it easier to inspect and test your models.
+1. Upload your `.glb` or `.gltf` file to Visual Studio Code, or open it using Visual Studio Code.  
+2. If the extension is set as the default, you can easily open the 3D model from the sidebar or by right-clicking the file and selecting **3D Preview**.  
+3. If the model contains animations, they will appear in a dropdown menu; otherwise, no animations will be shown.
 
 ## Test the Viewer
 
-Additionally, you can test the model viewer with the **Example.html** file included in the project. This file allows you to input a Pokémon ID and see if the 3D model is fetched from the api and displayed correctly in the browser.
+Additionally, you can test the model viewer with the **Example.html** file included in the project. This file allows you to input a Pokémon ID and see if the 3D model is fetched from the API and displayed correctly in the browser.
 
 To use this, simply open the `Example.html` file in your browser, enter a Pokémon ID, and click **Load Pokémon Model**. The viewer will fetch the 3D model from the API and display it. This serves as a test to ensure that the models are being fetched correctly and can also give you an idea of how to fetch and display Pokémon models in your own projects.
 
