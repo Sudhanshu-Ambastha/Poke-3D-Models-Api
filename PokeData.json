@@ -2605,8 +2605,13 @@
     },
     {
       "id": 521,
-      "name": "Unfezant",
-      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/regular/521.glb"
+      "name": "Unfezant-Male",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/regular/521-M.glb"
+    },
+    {
+      "id": 521,
+      "name": "Unfezant-Female",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/regular/521-F.glb"
     },
     {
       "id": 522,
