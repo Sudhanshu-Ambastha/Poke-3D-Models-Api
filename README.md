@@ -116,12 +116,12 @@ This app supports various Pokémon forms and categories. Below is a breakdown of
 | **Category**       | **Available** | **Total** | **Description**                                                                 |
 |---------------------|---------------|-----------|---------------------------------------------------------------------------------|
 | **Regular Forms**   | 942            | 1025      | Standard Pokémon forms from Generations 1 to 9.                                |
-| **Shiny Forms**     | 36            | 1025      | Alternate color variants of all standard Pokémon.                              |
-| **Gigantamax**      | 11             | 32        | Special forms of select Pokémon with unique appearances in *Sword and Shield*. |
+| **Shiny Forms**     | 37            | 1025      | Alternate color variants of all standard Pokémon.                              |
+| **Gigantamax**      | 10             | 32        | Special forms of select Pokémon with unique appearances in *Sword and Shield*. |
 | **Mega Evolutions** | 14             | 48        | Includes both single Mega forms and X/Y variants.                              |
 | **MegaShiny Evolutions** | 4         | 48        | Includes both single Mega forms and X/Y variants.                              |
 | **Hisuian Forms**   | 17            | 17        | Regional variants from *Pokémon Legends: Arceus*.                              |
-| **Alolan Forms**    | 6             | 18        | Regional variants introduced in *Pokémon Sun and Moon*.                        |
+| **Alolan Forms**    | 12             | 18        | Regional variants introduced in *Pokémon Sun and Moon*.                        |
 | **Galarian Forms**  | 11             | 20        | Regional variants from *Pokémon Sword and Shield*.                             |
 | **Primal Forms**    | 2             | 2         | Primal Groudon and Primal Kyogre.                                              |
 | **Unique Forms** | 4            | 4         | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus, Ultra Necrozma              |
