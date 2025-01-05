@@ -15,8 +15,6 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
   - [Dependencies](#dependencies)
   - [Pokémon Categories and Counts](#pokémon-categories-and-counts)
   - [| **Origin Forms** | 3 | 3 | Origin Forms represent the true or primal state of certain legendary Pokémon, showcasing their full power and unique design. i.e  Giratina, and Dialga/Palkia.          |](#-origin-forms--3--3--origin-forms-represent-the-true-or-primal-state-of-certain-legendary-pokémon-showcasing-their-full-power-and-unique-design-ie--giratina-and-dialgapalkia----------)
-  - [Checklist for Pokémon Models](#checklist-for-pokémon-models)
-    - [Symbol Key](#symbol-key)
   - [Note About APIs](#note-about-apis)
   - [Check Model Animations](#check-model-animations)
   - [Test the Viewer](#test-the-viewer)
@@ -131,18 +129,6 @@ This app supports various Pokémon forms and categories. Below is a breakdown of
 | **Fusion Forms** | 1 | 6 | Kyurem (black/white), Necrozma (Dusk Mane/Dawn Wings), Calyrex (Ice Rider/Shadow Rider)           |
 | **Origin Forms** | 3 | 3 | Origin Forms represent the true or primal state of certain legendary Pokémon, showcasing their full power and unique design. i.e  Giratina, and Dialga/Palkia.          |
 ---
-
-## Checklist for Pokémon Models
-
-We are tracking the availability of Pokémon 3D models. View the full checklist here:  
-
-➡️ [Pokémon Model Checklist](./Pokemon%20List.xlsx)  
-
-### Symbol Key  
-Here’s what each symbol represents:  
-- ✅: Model is **Available** and does not need replacement.  
-- 🔂: Model **Needs to be Replaced** with a better version or updated.  
-- 🚫: Model is **Not Available** and must be added.  
 
 ## Note About APIs
 
