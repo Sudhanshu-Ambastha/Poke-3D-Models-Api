@@ -4590,9 +4590,14 @@
     },
     {
         "id": 916,
-        "name": "Oinkologne",
-        "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/regular/916.glb"
+        "name": "Oinkologne-Male",
+        "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/regular/916-M.glb"
     },
+    {
+        "id": 916,
+        "name": "Oinkologne-Female",
+        "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/regular/916-F.glb"
+    },  
     {
         "id": 917,
         "name": "Tarountula",
