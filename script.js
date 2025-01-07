@@ -12,67 +12,59 @@ const generationRanges = {
     9: [906, 1025]
 };
 
-let filePath;
-
 function fetchPokemonData() {
     const formFilter = document.getElementById('formFilter').value;
-    switch (formFilter) {
-        case 'regular':
-            filePath = ['./PokeData.json'];
-            break;
-        case 'alolan':
-            filePath = ['./models/alolan/alolan.json'];
-            break;
-        case 'galarian':
-            filePath = ['./models/galar/galar.json'];
-            break;
-        case 'huisian':
-            filePath = ['./models/hisuian/hisuian.json'];
-            break;
-        case 'mega':
-            filePath = ['./models/mega/mega.json'];
-            break;
-        case 'gmax':
-            filePath = ['./models/gmax/Gmax.json'];
-            break;
-        case 'megaxy':
-            filePath = ['./models/xy.json'];
-            break;
-        case 'all':
-            filePath = [
-                './PokeData.json',
-                './models/alolan/alolan.json',
-                './models/galar/galar.json',
-                './models/hisuian/hisuian.json',
-                './models/mega/mega.json',
-                './models/gmax/Gmax.json',
-                './models/xy.json'
-            ];
-            break;
-        default:
-            filePath = ['./PokeData.json'];
-            break;
-    }
 
-    fetch(filePath)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        })
+    const filePaths = {
+        regular: './PokeData.json',
+        alolan: './models/alolan/alolan.json',
+        galarian: './models/galar/galar.json',
+        huisian: './models/hisuian/hisuian.json',
+        mega: './models/mega/mega.json',
+        gmax: './models/gmax/Gmax.json',
+        megaxy: './models/xy.json',
+        unique: './models/unique/unique.json',
+        shiny: './models/shiny/Shiny.json',
+        primal:'./models/primal/primal.json',
+        origin:'./models/origin/origin.json',  
+    };
+
+    const selectedPaths = formFilter === 'all'
+        ? Object.values(filePaths)
+        : [filePaths[formFilter]];
+
+    Promise.all(selectedPaths.map(path => fetch(path).then(res => res.json())))
         .then(data => {
-            allPokemon = data.pokemon;
-            renderPokedex(allPokemon);
+            allPokemon = data.flatMap(dataset => dataset.pokemon || dataset); 
+            filterAndRenderPokemon();
         })
         .catch(error => console.error('Error loading data:', error));
 }
 
-fetchPokemonData();
+function filterAndRenderPokemon() {
+    const genFilter = document.getElementById('generationFilter').value;
+    const searchInput = document.getElementById('searchInput').value.toLowerCase();
+    const formFilter = document.getElementById('formFilter').value;
+
+    let filteredPokemon = allPokemon;
+
+    if (genFilter !== 'all') {
+        const [start, end] = generationRanges[genFilter];
+        filteredPokemon = filteredPokemon.filter(pokemon => pokemon.id >= start && pokemon.id <= end);
+    }
+
+    if (searchInput) {
+        filteredPokemon = filteredPokemon.filter(pokemon =>
+            pokemon.name.toLowerCase().includes(searchInput) || pokemon.id.toString().includes(searchInput)
+        );
+    }
+
+    renderPokedex(filteredPokemon);
+}
 
 function renderPokedex(pokemonList) {
     const pokedex = document.getElementById('pokedex');
-    pokedex.innerHTML = '';
+    pokedex.innerHTML = ''; 
 
     pokemonList.forEach(pokemon => {
         const card = document.createElement('div');
@@ -81,7 +73,7 @@ function renderPokedex(pokemonList) {
         const modelViewer = document.createElement('model-viewer');
         modelViewer.setAttribute('camera-controls', '');
         modelViewer.setAttribute('auto-rotate', '');
-        modelViewer.setAttribute('autoplay', ''); 
+        modelViewer.setAttribute('autoplay', '');
         modelViewer.setAttribute('environment-image', 'neutral');
         modelViewer.setAttribute('alt', `Model of ${pokemon.name}`);
         modelViewer.setAttribute('src', pokemon.model);
@@ -97,57 +89,13 @@ function renderPokedex(pokemonList) {
         card.appendChild(name);
 
         card.addEventListener('click', () => openModal(pokemon.model));
-
         pokedex.appendChild(card);
     });
 }
 
-function filterByGen() {
-    const genFilter = document.getElementById('generationFilter').value;
-    const searchInput = document.getElementById('searchInput').value.toLowerCase();
-
-    let filteredPokemon = allPokemon;
-
-    if (genFilter && genFilter !== 'all') {
-        const [start, end] = generationRanges[genFilter];
-        filteredPokemon = filteredPokemon.filter(pokemon => pokemon.id >= start && pokemon.id <= end);
-    }
-
-    if (searchInput) {
-        filteredPokemon = filteredPokemon.filter(pokemon =>
-            pokemon.name.toLowerCase().includes(searchInput) || 
-            pokemon.id.toString().includes(searchInput)
-        );
-    }
-
-    renderPokedex(filteredPokemon);
-}
-
-function openModal(modelSrc) {
-    const modal = document.getElementById('modelModal');
-    const modelViewerModal = document.getElementById('modelViewerModal');
-    
-    modelViewerModal.setAttribute('camera-controls', '');
-    modelViewerModal.setAttribute('auto-rotate', '');
-    modelViewerModal.setAttribute('autoplay', ''); 
-    modelViewerModal.setAttribute('environment-image', 'neutral');
-    modelViewerModal.setAttribute('src', modelSrc);
-
-    modal.style.display = 'block';
-}
-
-function closeModal() {
-    const modal = document.getElementById('modelModal');
-    const modelViewerModal = document.getElementById('modelViewerModal');
-    
-    modelViewerModal.setAttribute('src', '');
-
-    modal.style.display = 'none';
-}
-
 document.getElementById('formFilter').addEventListener('change', fetchPokemonData);
-document.getElementById('generationFilter').addEventListener('change', filterByGen);
-document.getElementById('searchInput').addEventListener('input', filterByGen);
-document.getElementById('searchButton').addEventListener('click', filterByGen);
-document.getElementById('modelModal').addEventListener('click', closeModal);
-document.getElementById('modalContent').addEventListener('click', event => event.stopPropagation());
+document.getElementById('generationFilter').addEventListener('change', filterAndRenderPokemon);
+document.getElementById('searchInput').addEventListener('input', filterAndRenderPokemon);
+document.getElementById('searchButton').addEventListener('click', filterAndRenderPokemon);
+
+fetchPokemonData();

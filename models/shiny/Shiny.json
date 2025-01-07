@@ -3,22 +3,22 @@
     {
       "id": 1,
       "name": "Shiny Bulbasaur",
-      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/blob/main/models/shiny/1.glb"
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/shiny/1.glb"
     },
     {
       "id": 2,
       "name": "Shiny Ivysaur",
-      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/blob/main/models/shiny/2.glb"
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/shiny/2.glb"
     },
     {
       "id": 3,
       "name": "Shiny Venusaur",
-      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/blob/main/models/shiny/3.glb"
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/shiny/3.glb"
     },
     {
       "id": 4,
       "name": "Shiny Charmander",
-      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/blob/main/models/shiny/4.glb"
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/shiny/4.glb"
     },
     {
       "id": 5,
