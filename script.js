@@ -18,28 +18,39 @@ function fetchPokemonData() {
     const formFilter = document.getElementById('formFilter').value;
     switch (formFilter) {
         case 'regular':
-            filePath = './PokeData.json';
+            filePath = ['./PokeData.json'];
             break;
         case 'alolan':
-            filePath = './models/alolan/alolan.json';
+            filePath = ['./models/alolan/alolan.json'];
             break;
         case 'galarian':
-            filePath = './models/galar/galar.json';
+            filePath = ['./models/galar/galar.json'];
             break;
         case 'huisian':
-            filePath = './models/hisuian/hisuian.json';
+            filePath = ['./models/hisuian/hisuian.json'];
             break;
         case 'mega':
-            filePath = './models/mega/mega.json';
+            filePath = ['./models/mega/mega.json'];
             break;
         case 'gmax':
-            filePath = './models/gmax/Gmax.json';
+            filePath = ['./models/gmax/Gmax.json'];
             break;
         case 'megaxy':
-            filePath = './models/xy.json';
+            filePath = ['./models/xy.json'];
+            break;
+        case 'all':
+            filePath = [
+                './PokeData.json',
+                './models/alolan/alolan.json',
+                './models/galar/galar.json',
+                './models/hisuian/hisuian.json',
+                './models/mega/mega.json',
+                './models/gmax/Gmax.json',
+                './models/xy.json'
+            ];
             break;
         default:
-            filePath = './PokeData.json'; 
+            filePath = ['./PokeData.json'];
             break;
     }
 
