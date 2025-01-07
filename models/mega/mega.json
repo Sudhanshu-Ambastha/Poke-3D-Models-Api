@@ -1,4 +1,5 @@
-[
+{
+  "pokemon": [
   {
     "id": 3,
     "name": "Mega Venusaur",
@@ -240,3 +241,4 @@
     "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/mega/719.glb"
   }
 ]
+}

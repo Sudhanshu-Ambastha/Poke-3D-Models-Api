@@ -1,4 +1,5 @@
-[
+{
+  "pokemon": [
   {
     "id": 19,
     "name": "Alolan Rattata",
@@ -90,3 +91,4 @@
     "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/alolan/105.glb"
   }
 ]
+}

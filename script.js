@@ -12,8 +12,31 @@ const generationRanges = {
     9: [906, 1025]
 };
 
-fetch('./PokeData.json')
-    .then(response => response.json())
+let filePath;
+
+switch (ch) {
+    case 'regular':
+        filePath = './PokeData.json';
+        break;
+    case 'gmax':
+        filePath = './gmax.json';
+        break;
+    case 'mega':
+        filePath = './mega.json';
+        break;
+    // Add more cases as needed
+    default:
+        console.error('Invalid choice');
+        return; // Exit the function if the choice is invalid
+}
+
+fetch(filePath)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(data => {
         allPokemon = data.pokemon;
         renderPokedex(allPokemon);

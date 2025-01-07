@@ -1,4 +1,5 @@
-[
+{
+  "pokemon": [
   {
     "id": 382,
     "name": "Kyogre",
@@ -10,3 +11,4 @@
     "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/primal/383.glb"
   }
 ]
+}

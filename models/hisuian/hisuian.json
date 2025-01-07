@@ -1,5 +1,6 @@
-[
-  {
+{
+  "pokemon": [
+  { 
     "id": 58,
     "name": "Hisuian Growlithe",
     "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/58.glb"
@@ -85,3 +86,4 @@
     "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/hisuian/903.glb"
   }
 ]
+}

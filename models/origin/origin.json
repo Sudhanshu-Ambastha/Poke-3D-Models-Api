@@ -1,4 +1,5 @@
-[
+{
+  "pokemon": [
   {
     "id": 483,
     "name": "Dialga (Origin)",
@@ -15,3 +16,4 @@
     "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/origin/487.glb"
   }
 ]
+}
