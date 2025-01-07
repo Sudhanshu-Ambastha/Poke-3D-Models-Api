@@ -14,34 +14,50 @@ const generationRanges = {
 
 let filePath;
 
-switch (ch) {
-    case 'regular':
-        filePath = './PokeData.json';
-        break;
-    case 'gmax':
-        filePath = './gmax.json';
-        break;
-    case 'mega':
-        filePath = './mega.json';
-        break;
-    // Add more cases as needed
-    default:
-        console.error('Invalid choice');
-        return; // Exit the function if the choice is invalid
+function fetchPokemonData() {
+    const formFilter = document.getElementById('formFilter').value;
+    switch (formFilter) {
+        case 'regular':
+            filePath = './PokeData.json';
+            break;
+        case 'alolan':
+            filePath = './models/alolan/alolan.json';
+            break;
+        case 'galarian':
+            filePath = './models/galar/galar.json';
+            break;
+        case 'huisian':
+            filePath = './models/hisuian/hisuian.json';
+            break;
+        case 'mega':
+            filePath = './models/mega/mega.json';
+            break;
+        case 'gmax':
+            filePath = './models/gmax/Gmax.json';
+            break;
+        case 'megaxy':
+            filePath = './models/xy.json';
+            break;
+        default:
+            filePath = './PokeData.json'; 
+            break;
+    }
+
+    fetch(filePath)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            allPokemon = data.pokemon;
+            renderPokedex(allPokemon);
+        })
+        .catch(error => console.error('Error loading data:', error));
 }
 
-fetch(filePath)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(data => {
-        allPokemon = data.pokemon;
-        renderPokedex(allPokemon);
-    })
-    .catch(error => console.error('Error loading data:', error));
+fetchPokemonData();
 
 function renderPokedex(pokemonList) {
     const pokedex = document.getElementById('pokedex');
@@ -102,7 +118,7 @@ function openModal(modelSrc) {
     
     modelViewerModal.setAttribute('camera-controls', '');
     modelViewerModal.setAttribute('auto-rotate', '');
-    modelViewer.setAttribute('autoplay', ''); 
+    modelViewerModal.setAttribute('autoplay', ''); 
     modelViewerModal.setAttribute('environment-image', 'neutral');
     modelViewerModal.setAttribute('src', modelSrc);
 
@@ -118,6 +134,7 @@ function closeModal() {
     modal.style.display = 'none';
 }
 
+document.getElementById('formFilter').addEventListener('change', fetchPokemonData);
 document.getElementById('generationFilter').addEventListener('change', filterByGen);
 document.getElementById('searchInput').addEventListener('input', filterByGen);
 document.getElementById('searchButton').addEventListener('click', filterByGen);
