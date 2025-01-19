@@ -38,14 +38,14 @@ If you want to fetch Pokémon data from this project to use in your own applicat
 ### API Endpoint
 The Pokémon data is exposed as a JSON API. You can access it using the following URL:
 ```
-https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-Models/main/PokeData.json
+https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main/PokeData.json
 ```
 
 You can use this endpoint to fetch the JSON data and use it in your applications to display Pokémon 3D models.
 
 Example of fetching data with JavaScript:
 ```
-fetch('https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D-Models/main/PokeData.json')
+fetch('https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main/PokeData.json')
   .then(response => response.json())
   .then(data => {
     console.log(data); 
@@ -67,7 +67,7 @@ We welcome contributions from the community! You can help by:
 1. **Fork the Repository**: Fork the repo to your GitHub account.
 2. **Clone your Fork**: Clone your fork to your local machine.
     ```bash
-    git clone https://github.com/Sudhanshu-Ambastha/Pokemon-3D-Models.git
+    git clone https://github.com/Sudhanshu-Ambastha/Pokemon-3D.git
     ```
 3. **Create a Branch**: Create a new branch for your feature or bug fix.
     ```bash
@@ -157,6 +157,6 @@ By using this example, you can verify if the API is working as expected and get 
 This project is open source and available under the [MIT License](./LICENSE).
 
 ## Contributors
-<a href = "https://github.com/Sudhanshu-Ambastha/Poke-3D-Models/contributors">
-  <img src = "https://contrib.rocks/image?repo=Sudhanshu-Ambastha/Poke-3D-Models"/>
+<a href = "https://github.com/Sudhanshu-Ambastha/Pokemon-3D/contributors">
+  <img src = "https://contrib.rocks/image?repo=Sudhanshu-Ambastha/Pokemon-3D"/>
 </a>
