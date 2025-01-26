@@ -11,6 +11,7 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
     - [API Endpoint](#api-endpoint)
   - [Contributing](#contributing)
     - [Steps to Contribute:](#steps-to-contribute)
+    - [The Pokémon 3D project community](#the-pokémon-3d-project-community)
   - [How to Add More Models](#how-to-add-more-models)
   - [Dependencies](#dependencies)
   - [Pokémon Categories and Counts](#pokémon-categories-and-counts)
@@ -84,6 +85,9 @@ We welcome contributions from the community! You can help by:
     ```
 7. **Create a Pull Request**: Create a pull request to the main repository, describing your changes.
 
+### The Pokémon 3D project community 
+Join our Discord: [The Pokémon 3D project](https://discord.gg/4JptVPw8qn)
+
 ## How to Add More Models
 
 To add new Pokémon models to the app, follow these steps:
@@ -115,8 +119,8 @@ This app supports various Pokémon forms and categories. Below is a breakdown of
 
 | **Category**       | **Available** | **Total** | **Description**                                                                 |
 |---------------------|---------------|-----------|---------------------------------------------------------------------------------|
-| **Regular Forms**   | 943            | 1028      | Standard Pokémon forms from Generations 1 to 9 including male & female.                                |
-| **Shiny Forms**     | 49            | 1025      | Alternate color variants of all standard Pokémon.                              |
+| **Regular Forms**   | 943            | 1028      | Standard Pokémon forms from Generations 1 to 9 including male & female.        |
+| **Shiny Forms**     | 42            | 1025      | Alternate color variants of all standard Pokémon.                              |
 | **Gigantamax**      | 10             | 32        | Special forms of select Pokémon with unique appearances in *Sword and Shield*. |
 | **Mega Evolutions** | 48             | 48        | Includes both single Mega forms and X/Y variants.                              |
 | **MegaShiny Evolutions** | 4         | 48        | Includes both single Mega forms and X/Y variants.                              |
@@ -125,7 +129,7 @@ This app supports various Pokémon forms and categories. Below is a breakdown of
 | **Galarian Forms**  | 11             | 20        | Regional variants from *Pokémon Sword and Shield*.                             |
 | **Primal Forms**    | 2             | 2         | Primal Groudon and Primal Kyogre.                                              |
 | **Unique Forms** | 4            | 4         | Ash's Greninja, Armoured Mewtwo, Eternamax Eternatus, Ultra Necrozma              |
-| **Shadow Forms** | 3 | 131 | Dark, corrupted versions of Pokémon often seen in Pokémon Colosseum and XD: Gale of Darkness.           |
+| **Shadow Forms** | 3 | 131 | Dark, corrupted versions of Pokémon often seen in Pokémon Colosseum and XD: Gale of Darkness.         |
 | **Fusion Forms** | 3 | 6 | Kyurem (black/white), Necrozma (Dusk Mane/Dawn Wings), Calyrex (Ice Rider/Shadow Rider)           |
 | **Origin Forms** | 3 | 3 | Origin Forms represent the true or primal state of certain legendary Pokémon, showcasing their full power and unique design. i.e  Giratina, and Dialga/Palkia.          |
 ---
