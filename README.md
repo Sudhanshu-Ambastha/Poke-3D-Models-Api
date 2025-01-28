@@ -15,6 +15,7 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
   - [How to Add More Models](#how-to-add-more-models)
   - [Dependencies](#dependencies)
   - [Pokémon Categories and Counts](#pokémon-categories-and-counts)
+  - [| **Origin Forms** | 3 | 3 | Origin Forms represent the true or primal state of certain legendary Pokémon, showcasing their full power and unique design. i.e  Giratina, and Dialga/Palkia.          |](#-origin-forms--3--3--origin-forms-represent-the-true-or-primal-state-of-certain-legendary-pokémon-showcasing-their-full-power-and-unique-design-ie--giratina-and-dialgapalkia----------)
   - [Note About APIs](#note-about-apis)
   - [Check Model Animations](#check-model-animations)
   - [Test the Viewer](#test-the-viewer)
@@ -119,10 +120,10 @@ This app supports various Pokémon forms and categories. Below is a breakdown of
 | **Category**       | **Available** | **Total** | **Description**                                                                 |
 |---------------------|---------------|-----------|---------------------------------------------------------------------------------|
 | **Regular Forms**   | 943            | 1028      | Standard Pokémon forms from Generations 1 to 9 including male & female.        |
-| **Shiny Forms**     | 49            | 1025      | Alternate color variants of all standard Pokémon.                              |
+| **Shiny Forms**     | 49            | 1028      | Alternate color variants of all standard Pokémon.                              |
 | **Gigantamax**      | 10             | 32        | Special forms of select Pokémon with unique appearances in *Sword and Shield*. |
-| **Mega Evolutions** | 48             | 48        | Includes both single Mega forms and X/Y variants.                              |
-| **MegaShiny Evolutions** | 4         | 48        | Includes both single Mega forms and X/Y variants.                              |
+| **Mega Evolutions** | 48             | 49        | Includes both single Mega forms and X/Y variants.                              |
+| **MegaShiny Evolutions** | 4         | 49        | Includes both single Mega forms and X/Y variants.                              |
 | **Hisuian Forms**   | 17            | 17        | Regional variants from *Pokémon Legends: Arceus*.                              |
 | **Alolan Forms**    | 12             | 18        | Regional variants introduced in *Pokémon Sun and Moon*.                        |
 | **Galarian Forms**  | 11             | 20        | Regional variants from *Pokémon Sword and Shield*.                             |
@@ -137,8 +138,8 @@ This app supports various Pokémon forms and categories. Below is a breakdown of
 
 While there are many **Pokémon APIs** available that provide Pokémon data (e.g., stats, types, moves, etc.), **most of these APIs do not offer 3D models** of Pokémon. 
 
-- **Why don't these APIs provide 3D models?**: Providing 3D models requires significant storage and bandwidth. Models are often large in size (several MBs), and hosting them for free or for public use can be difficult due to storage and bandwidth limitations.
-- **Why don't we use other APIs?**: While you can retrieve detailed Pokémon information (like types, stats, and abilities) from APIs like [Pokémon API](https://pokeapi.co/), these services typically do not provide 3D models. As a result, it would be challenging to include those models in this app without substantial storage for model files.
+- **Why don't these APIs provide 3D models?**: Providing 3D models requires significant storage and bandwidth. Models are often large in size (several MBs) and need to be game-ready to load efficiently on mobile devices. Hosting them for free or public use can be challenging due to storage and bandwidth limitations. Additionally, game-ready models may not be freely available.
+- **Why don't we use other APIs?**: While you can retrieve detailed Pokémon information (like types, stats, and abilities) from APIs like [Pokémon API](https://pokeapi.co/), these services typically do not provide 3D models. Consequently, incorporating 3D models into this app would require substantial storage space for hosting the model files independently.
 
 ## Check Model Animations
 
