@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,6 +73,7 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Pokémon 3D Models</h1>
 
@@ -94,65 +96,64 @@
     <script>
         let allPokemonData = [];
 
-        function renderPokemonList(pokemonData) {
-            const pokemonListElement = document.getElementById('pokemon-list');
-            pokemonListElement.innerHTML = '';
-
-            if (pokemonData.length === 0) {
-                pokemonListElement.innerHTML = '<p class="error">No Pokémon found.</p>';
-                return;
+        async function fetchData(filters = {}) {
+                try {
+                    const queryParams = new URLSearchParams(filters).toString();
+                    const response = await fetch(`http://localhost:3000/api/data?${queryParams}`);
+                    const data = await response.json();
+                    allPokemonData = data;
+                    document.getElementById('loading').style.display = 'none';
+                    renderPokemonList(allPokemonData);
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+                    document.getElementById('loading').style.display = 'none';
+                    document.getElementById('pokemon-list').innerHTML = '<p class="error">Failed to load Pokémon models. Please try again later.</p>';
+                }
             }
 
-            pokemonData.forEach(pokemon => {
-                const pokemonElement = document.createElement('div');
-                pokemonElement.classList.add('pokemon-item');
+        function renderPokemonList(pokemonData) {
+                const pokemonListElement = document.getElementById('pokemon-list');
+                pokemonListElement.innerHTML = '';
 
-                const modelSrc = pokemon.model ? pokemon.model.replace('github.com', 'raw.githubusercontent.com').replace('/blob', '') : '';
-                const hasModel = modelSrc ? '' : 'class="error"';
+                if (pokemonData.length === 0) {
+                    pokemonListElement.innerHTML = '<p class="error">No Pokémon found.</p>';
+                    return;
+                }
 
-                pokemonElement.innerHTML = `
-                    <h3>${pokemon.name} (#${pokemon.id})</h3>
-                    <model-viewer src="${modelSrc}" alt="${pokemon.name} 3D model" auto-rotate camera-controls ${hasModel}></model-viewer>
-                    <br>
-                    ${hasModel ? '<span class="error">Model not available</span>' : ''}
-                `;
+                // Loop through the received data
+                pokemonData.forEach(pokeData => {
+                    pokeData.pokemon.forEach(pokemon => {
+                        const pokemonElement = document.createElement('div');
+                        pokemonElement.classList.add('pokemon-item');
 
-                pokemonListElement.appendChild(pokemonElement);
-            });
-        }
+                        // Rendering the pokemon information
+                        pokemonElement.innerHTML = `
+                <h3>${pokemon.name} (#${pokemon.id})</h3>
+                <model-viewer src="${pokemon.model}" alt="${pokemon.name} 3D model" auto-rotate camera-controls></model-viewer>
+            `;
+
+                        pokemonListElement.appendChild(pokemonElement);
+                    });
+                });
+            }
 
         function filterPokemon() {
-            const filterValue = document.getElementById('filter-dropdown').value.toLowerCase();
-            const searchValue = document.getElementById('search-input').value.toLowerCase();
+                const filterValue = document.getElementById('filter-dropdown').value.toLowerCase();
+                const searchValue = document.getElementById('search-input').value.toLowerCase();
 
-            const filteredData = allPokemonData.filter(pokemon => {
-                const matchesSearch = pokemon.name.toLowerCase().includes(searchValue) || String(pokemon.id).includes(searchValue);
-                const matchesFilter = filterValue === 'all' || (pokemon.form && pokemon.form.toLowerCase() === filterValue);
+                const filters = {};
 
-                return matchesSearch && matchesFilter;
-            });
+                if (filterValue !== 'all') filters.form = filterValue;
+                if (searchValue) filters.name = searchValue;
 
-            renderPokemonList(filteredData);
-        }
-
-        fetch('http://localhost:3000/api/data')
-            .then(response => response.json())
-            .then(data => {
-                const loadingElement = document.getElementById('loading');
-                loadingElement.style.display = 'none';
-
-                allPokemonData = data.flatMap(item => item.pokemon);
-                renderPokemonList(allPokemonData);
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-                const loadingElement = document.getElementById('loading');
-                loadingElement.style.display = 'none';
-                document.getElementById('pokemon-list').innerHTML = '<p class="error">Failed to load Pokémon models. Please try again later.</p>';
-            });
+                fetchData(filters);
+            }
 
         document.getElementById('search-button').addEventListener('click', filterPokemon);
-        document.getElementById('filter-dropdown').addEventListener('change', filterPokemon);
+            document.getElementById('filter-dropdown').addEventListener('change', filterPokemon);
+
+            fetchData();
     </script>
 </body>
+
 </html>

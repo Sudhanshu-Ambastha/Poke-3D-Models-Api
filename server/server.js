@@ -1,37 +1,33 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
+const PokemonModel = require('./models/pokemon'); // Assuming you have a PokemonModel
+
 const app = express();
-const PORT = 3000;
+const port = 3000;
 
-app.use(cors()); 
-
-mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
-    .then(() => console.log('MongoDB connected'))
-    .catch((err) => console.log(err));
-
-const PokeModelSchema = new mongoose.Schema({
-    pokemon: [{
-        id: Number,
-        name: String,
-        model: String
-    }]
-});
-
-const PokeModel = mongoose.model('PokeModels', PokeModelSchema);
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.get('/api/data', async (req, res) => {
-    try {
-        const data = await PokeModel.find();  
-        res.json(data);  
-    } catch (err) {
-        res.status(500).json({ message: err.message });
-    }
+  const { form, name, id } = req.query;  // Get the query parameters
+  
+  try {
+    let filter = {};
+
+    // Build filter object based on query parameters
+    if (form) filter['pokemon.form'] = form;
+    if (name) filter['pokemon.name'] = { $regex: name, $options: 'i' }; // Case-insensitive search
+    if (id) filter['pokemon.id'] = id;
+
+    // Find the filtered Pokémon data
+    const pokemonData = await PokemonModel.find(filter);
+
+    res.json(pokemonData);
+  } catch (error) {
+    console.error('Error fetching Pokémon data:', error);
+    res.status(500).json({ error: 'Failed to fetch Pokémon data' });
+  }
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
 });
