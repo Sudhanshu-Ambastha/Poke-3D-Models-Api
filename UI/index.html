@@ -97,62 +97,55 @@
         let allPokemonData = [];
 
         async function fetchData(filters = {}) {
-                try {
-                    const queryParams = new URLSearchParams(filters).toString();
-                    const response = await fetch(`http://localhost:3000/api/data?${queryParams}`);
-                    const data = await response.json();
-                    allPokemonData = data;
-                    document.getElementById('loading').style.display = 'none';
-                    renderPokemonList(allPokemonData);
-                } catch (error) {
-                    console.error('Error fetching data:', error);
-                    document.getElementById('loading').style.display = 'none';
-                    document.getElementById('pokemon-list').innerHTML = '<p class="error">Failed to load Pokémon models. Please try again later.</p>';
-                }
+            try {
+                console.log('Fetching data...');
+                const response = await fetch('http://localhost:5000/v1/Regular');
+                console.log('Response:', response);
+                const data = await response.json();
+                console.log('Fetched Data:', data);  // Log fetched data
+                allPokemonData = data.pokemon || [];
+                document.getElementById('loading').style.display = 'none';
+                renderPokemonList(allPokemonData);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('pokemon-list').innerHTML = '<p class="error">Failed to load Pokémon models. Please try again later.</p>';
             }
+        }
 
         function renderPokemonList(pokemonData) {
-                const pokemonListElement = document.getElementById('pokemon-list');
-                pokemonListElement.innerHTML = '';
+            const pokemonListElement = document.getElementById('pokemon-list');
+            pokemonListElement.innerHTML = '';
 
-                if (pokemonData.length === 0) {
-                    pokemonListElement.innerHTML = '<p class="error">No Pokémon found.</p>';
-                    return;
-                }
-
-                // Loop through the received data
-                pokemonData.forEach(pokeData => {
-                    pokeData.pokemon.forEach(pokemon => {
-                        const pokemonElement = document.createElement('div');
-                        pokemonElement.classList.add('pokemon-item');
-
-                        // Rendering the pokemon information
-                        pokemonElement.innerHTML = `
-                <h3>${pokemon.name} (#${pokemon.id})</h3>
-                <model-viewer src="${pokemon.model}" alt="${pokemon.name} 3D model" auto-rotate camera-controls></model-viewer>
-            `;
-
-                        pokemonListElement.appendChild(pokemonElement);
-                    });
-                });
+            if (pokemonData.length === 0) {
+                pokemonListElement.innerHTML = '<p class="error">No Pokémon found.</p>';
+                return;
             }
+
+            pokemonData.forEach(pokemon => {
+                const pokemonElement = document.createElement('div');
+                pokemonElement.classList.add('pokemon-item');
+
+                pokemonElement.innerHTML = `
+                        <h3>${pokemon.name} (#${pokemon.id})</h3>
+                        <model-viewer src="${pokemon.model}" alt="${pokemon.name} 3D model" auto-rotate camera-controls></model-viewer>
+                    `;
+
+                pokemonListElement.appendChild(pokemonElement);
+            });
+        }
 
         function filterPokemon() {
-                const filterValue = document.getElementById('filter-dropdown').value.toLowerCase();
-                const searchValue = document.getElementById('search-input').value.toLowerCase();
+            const filterValue = document.getElementById('filter-dropdown').value.toLowerCase();
+            const searchValue = document.getElementById('search-input').value.toLowerCase();
 
-                const filters = {};
-
-                if (filterValue !== 'all') filters.form = filterValue;
-                if (searchValue) filters.name = searchValue;
-
-                fetchData(filters);
-            }
+            fetchData({ form: filterValue, name: searchValue });
+        }
 
         document.getElementById('search-button').addEventListener('click', filterPokemon);
-            document.getElementById('filter-dropdown').addEventListener('change', filterPokemon);
+        document.getElementById('filter-dropdown').addEventListener('change', filterPokemon);
 
-            fetchData();
+        fetchData();
     </script>
 </body>
 
