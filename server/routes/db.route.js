@@ -1,7 +1,22 @@
 import express from 'express';
 const router = express.Router();
 
-import { RegularPokemon, ShinyPokemon, AlolanPokemon, HisuianPokemon, MegaPokemon, GalarPokemon, GmaxPokemon, MegaShinyPokemon, MultiFormPokemon, ShadowPokemon, UniquePokemon, XyPokemon, PrimalPokemon, OriginPokemon,} from '../models/db.model.js'; 
+import {
+  RegularPokemon,
+  ShinyPokemon,
+  AlolanPokemon,
+  HisuianPokemon,
+  MegaPokemon,
+  GalarPokemon,
+  GmaxPokemon,
+  MegaShinyPokemon,
+  MultiFormPokemon,
+  ShadowPokemon,
+  UniquePokemon,
+  XyPokemon,
+  PrimalPokemon,
+  OriginPokemon,
+} from '../models/db.model.js';
 
 router.get('/regular', async (req, res) => {
   try {
