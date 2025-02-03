@@ -1,37 +1,20 @@
 import mongoose from 'mongoose';
-import dbSchemas from '../schema/db.schema.js';
+import pokemonSchema from '../schema/db.schema.js'; 
 
-const { 
-  regularSchema,
-  shinySchema,
-  alolanSchema,
-  hisuianSchema,
-  megaSchema,
-  galarSchema,
-  gmaxSchema,
-  megaShinySchema,
-  multiFormSchema,
-  shadowSchema,
-  uniqueSchema,
-  xySchema,
-  primalSchema,
-  originSchema,
-} = dbSchemas;
-
-const RegularPokemon = mongoose.model('regular', regularSchema);
-const ShinyPokemon = mongoose.model('shiny', shinySchema);
-const AlolanPokemon = mongoose.model('alolan', alolanSchema);
-const HisuianPokemon = mongoose.model('hisuian', hisuianSchema);
-const MegaPokemon = mongoose.model('mega', megaSchema);
-const GalarPokemon = mongoose.model('galar', galarSchema);
-const GmaxPokemon = mongoose.model('gmax', gmaxSchema);
-const MegaShinyPokemon = mongoose.model('megaShiny', megaShinySchema);
-const MultiFormPokemon = mongoose.model('multiForm', multiFormSchema);
-const ShadowPokemon = mongoose.model('shadow', shadowSchema);
-const UniquePokemon = mongoose.model('unique', uniqueSchema);
-const XyPokemon = mongoose.model('xy', xySchema);
-const PrimalPokemon = mongoose.model('primal', primalSchema);
-const OriginPokemon = mongoose.model('origin', originSchema);
+const RegularPokemon = mongoose.model('regular', pokemonSchema);
+const ShinyPokemon = mongoose.model('shiny', pokemonSchema);
+const AlolanPokemon = mongoose.model('alolan', pokemonSchema);
+const HisuianPokemon = mongoose.model('hisuian', pokemonSchema);
+const MegaPokemon = mongoose.model('mega', pokemonSchema);
+const GalarPokemon = mongoose.model('galar', pokemonSchema);
+const GmaxPokemon = mongoose.model('gmax', pokemonSchema);
+const MegaShinyPokemon = mongoose.model('megaShiny', pokemonSchema);
+const MultiFormPokemon = mongoose.model('multiForm', pokemonSchema);
+const ShadowPokemon = mongoose.model('shadow', pokemonSchema);
+const UniquePokemon = mongoose.model('unique', pokemonSchema);
+const XyPokemon = mongoose.model('xy', pokemonSchema);
+const PrimalPokemon = mongoose.model('primal', pokemonSchema);
+const OriginPokemon = mongoose.model('origin', pokemonSchema);
 
 export {
   RegularPokemon,
