@@ -6,21 +6,6 @@
     "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/mega/3.glb"
   },
   {
-    "id": 6,
-    "name": "Mega Charizard X",
-    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/mega/6x.glb"
-  },
-  {
-    "id": 6,
-    "name": "Mega Charizard Y",
-    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/mega/6y.glb"
-  },
-  {
-    "id": 9,
-    "name": "Mega Blastoise",
-    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/mega/9.glb"
-  },
-  {
     "id": 15,
     "name": "Mega Beedrill",
     "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/mega/15.glb"
@@ -64,16 +49,6 @@
     "id": 142,
     "name": "Mega Aerodactyl",
     "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/mega/142.glb"
-  },
-  {
-    "id": 150,
-    "name": "Mega Mewtwo X",
-    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/mega/150x.glb"
-  },
-  {
-    "id": 150,
-    "name": "Mega Mewtwo Y",
-    "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/mega/150y.glb"
   },
   {
     "id": 181,

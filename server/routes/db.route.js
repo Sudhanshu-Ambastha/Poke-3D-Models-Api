@@ -160,7 +160,7 @@ router.get('/origin', async (req, res) => {
 
 router.get('/all', async (req, res) => {
   try {
-    const regular = await RegularPokemon.find({});
+    const regular = await RegularPokemon.find({}).limit(721);
     const shiny = await ShinyPokemon.find({});
     const alolan = await AlolanPokemon.find({});
     const hisuian = await HisuianPokemon.find({});
