@@ -3,32 +3,32 @@
     {
       "id": 128,
       "name": "Paldean Tauros (aqua breed)",
-      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/multiForm/PaldeanTaurosAqua.glb"
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/multiForm/128-1.glb"
     },
     {
       "id": 128,
       "name": "Paldean Tauros (blaze breed)",
-      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/multiForm/PaldeanTaurosBlaze.glb"
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/multiForm/128-2.glb"
     },
     {
       "id": 128,
       "name": "Paldean Tauros (combat breed)",
-      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/multiForm/PaldeanTaurosCombat.glb"
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/multiForm/128-3.glb"
     },
     {
       "id": 386,
       "name": "Deoxys Attack Form",
-      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/multiForm/DeoxysAttackForm.glb"
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/multiForm/386-1.glb"
     },
     {
       "id": 386,
       "name": "Deoxys Defense Form",
-      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/multiForm/DeoxysDefenseForm.glb"
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/multiForm/386-2.glb"
     },
     {
       "id": 386,
       "name": "Deoxys Speed Form",
-      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/multiForm/DeoxysSpeedForm.glb"
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Poke-3D-Models-Api/main/models/multiForm/386-3.glb"
     },
     {
       "id": 479,
