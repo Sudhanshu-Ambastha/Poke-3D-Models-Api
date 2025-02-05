@@ -27,6 +27,7 @@ function fetchPokemonData() {
         shiny: './models/shiny/Shiny.json',
         primal:'./models/primal/primal.json',
         origin:'./models/origin/origin.json',  
+        multi:'./models/multiForm/MultiForm.json',  
     };
 
     const selectedPaths = formFilter === 'all'

@@ -20,7 +20,7 @@ import {
 
 router.get('/regular', async (req, res) => {
   try {
-    const pokemonData = await RegularPokemon.find({});
+    const pokemonData = await RegularPokemon.find({}).limit(721);
     res.json(pokemonData);
   } catch (error) {
     console.error('Error fetching regular Pokemon:', error);

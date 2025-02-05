@@ -5,9 +5,8 @@ import dotenv from 'dotenv';
 import router from './routes/db.route.js';
 
 const app = express();
-const port = process.env.PORT;
-
 dotenv.config();
+const port = process.env.PORT;
 
 mongoose.connect(
   process.env.MONGO_URI,
