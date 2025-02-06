@@ -1,8 +1,0 @@
-{
-"name": "pokemon3d-api", 
-"version": 2, 
-"installCommand": "npm install",
-"rewrites": [{ "source": "/(.*)", "destination": "/" }] ,
-"env": { "MONGO_URI": "@MONGO_URI" },
-"builds": [{ "src": "server/index.js", "use": "@vercel/node" }]
-}
