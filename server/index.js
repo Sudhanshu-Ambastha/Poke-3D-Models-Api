@@ -9,8 +9,7 @@ const app = express();
 const cors = require('cors');
 dotenv.config();
 const port = process.env.PORT;
-const allowedOrigins = [
-  'https://pokemon3d-api.onrender.com', 'http://localhost:3000', 'http://localhost:5000', 'http://localhost:8080', 'http://localhost:5173', 'http://127.0.0.1:5173'];
+const allowedOrigins = [ 'https://pokemon3d-api.onrender.com',  'http://localhost:3000', 'http://localhost:5000','http://localhost:8080','http://localhost:5173','http://127.0.0.1:5173'];
 
 mongoose.connect(
   process.env.MONGO_URI,
@@ -30,6 +29,25 @@ app.use(cors({
 }));
 
 app.use('/v1', router); 
+
+app.get('/', (req, res) => {
+  res.send(`
+    <html>
+    <head>
+      <title>Pokemon3D API</title>
+    </head>
+    <body>
+      <h1>Welcome to the Pokemon3D API!</h1>
+      <p>
+        See the <a href="YOUR_POSTMAN_DOCS_LINK" target="_blank">Postman documentation</a> for available endpoints.
+      </p>
+      <p>
+        To see the available 3D models, visit the <a href="https://sudhanshu-ambastha.github.io/Pokemon-3D/" target="_blank">Pokemon 3D website</a>.
+      </p>
+    </body>
+    </html>
+  `);
+});
 
 app.listen(port, () => {
   console.log(`Server listening on port http://localhost:${port}`);
