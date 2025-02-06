@@ -16,7 +16,7 @@ function fetchPokemonData() {
     const formFilter = document.getElementById('formFilter').value;
 
     const filePaths = {
-        regular: './PokeData.json',
+        regular: 'https://pokemon3d-api.onrender.com/v1/Regular',
         alolan: './models/alolan/alolan.json',
         galarian: './models/galar/galar.json',
         huisian: './models/hisuian/hisuian.json',
