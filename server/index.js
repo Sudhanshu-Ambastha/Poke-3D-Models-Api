@@ -6,7 +6,6 @@ import dotenv from 'dotenv';
 import router from './routes/db.route.js';
 
 const app = express();
-const cors = require('cors');
 dotenv.config();
 const port = process.env.PORT;
 const allowedOrigins = [ 'https://pokemon3d-api.onrender.com',  'http://localhost:3000', 'http://localhost:5000','http://localhost:8080','http://localhost:5173','http://127.0.0.1:5173'];
@@ -34,10 +33,9 @@ app.get('/', (req, res) => {
   res.send(`
      Welcome to the Pokemon3D API!
 
-     See the docs for available endpoints.
+     See the docs at for available endpoints.
 
     To see the available 3D models, visit the https://sudhanshu-ambastha.github.io/Pokemon-3D/.
-
   `);
 });
 
