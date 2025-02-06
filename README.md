@@ -141,7 +141,6 @@ This app supports various Pokémon forms and categories. Below is a breakdown of
 ## Note About APIs
 
 While there are many **Pokémon APIs** available that provide Pokémon data (e.g., stats, types, moves, etc.), **most of these APIs do not offer 3D models** of Pokémon. 
-
 - **Why don't these APIs provide 3D models?**: Providing 3D models requires significant storage and bandwidth. Models are often large in size (several MBs) and need to be game-ready to load efficiently on mobile devices. Hosting them for free or public use can be challenging due to storage and bandwidth limitations. Additionally, game-ready models may not be freely available.
 - **Why don't we use other APIs?**: While you can retrieve detailed Pokémon information (like types, stats, and abilities) from APIs like [Pokémon API](https://pokeapi.co/), these services typically do not provide 3D models. Consequently, incorporating 3D models into this app would require substantial storage space for hosting the model files independently.
 
