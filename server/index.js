@@ -34,9 +34,9 @@ app.get('/', (req, res) => {
   res.send(`
      Welcome to the Pokemon3D API!
 
-     See the <a href="YOUR_POSTMAN_DOCS_LINK" target="_blank">Postman documentation</a> for available endpoints.
+     See the docs for available endpoints.
 
-    To see the available 3D models, visit the <a href="https://sudhanshu-ambastha.github.io/Pokemon-3D/" target="_blank">Pokemon 3D website</a>.
+    To see the available 3D models, visit the https://sudhanshu-ambastha.github.io/Pokemon-3D/.
 
   `);
 });
