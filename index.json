@@ -3,8 +3,13 @@
   "info": {
     "title": "Pokemon3D API",
     "description": "This API provides access to 3D models of Pokémon.",
-    "version": "1.0.0"
+    "version": "0.0.1"
   },
+  "servers": [
+    {
+      "url": "https://pokemon3d-api.onrender.com"
+    }
+  ],
   "paths": {
     "/v1/all": {
       "get": {
