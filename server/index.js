@@ -19,9 +19,10 @@ mongoose.connect(
 
 app.use(cors({
     origin: function (origin, callback) {
-        if (!origin || allowedOrigins.includes(origin)) { 
+        if (!origin || allowedOrigins.includes(origin)) {
             callback(null, true);
         } else {
+            console.error("CORS Error: Origin", origin, "is not allowed.");
             callback(new Error('Not allowed by CORS'));
         }
     }
@@ -29,12 +30,15 @@ app.use(cors({
 
 app.use('/v1', router); 
 
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something went wrong!'); 
+});
+
 app.get('/', (req, res) => {
   res.send(`
-     Welcome to the Pokemon3D API!
-
-     See the docs at for available endpoints.
-
+     Welcome to the Pokemon3D API!\n
+     See the docs at for available endpoints.\n
     To see the available 3D models, visit the https://sudhanshu-ambastha.github.io/Pokemon-3D/.
   `);
 });
