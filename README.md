@@ -4,6 +4,7 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
 ---
 
 ## Table of Contents
+
 - [Pokémon 3D Models](#pokémon-3d-models)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
@@ -11,15 +12,14 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
     - [API Endpoint](#api-endpoint)
   - [Contributing](#contributing)
     - [Steps to Contribute:](#steps-to-contribute)
-    - [The Pokémon 3D project community](#the-pokémon-3d-project-community)
   - [How to Add More Models](#how-to-add-more-models)
   - [Dependencies](#dependencies)
   - [Pokémon Categories and Counts](#pokémon-categories-and-counts)
   - [| **Origin Forms** | 3 | 3 | Origin Forms represent the true or primal state of certain legendary Pokémon, showcasing their full power and unique design. i.e  Giratina, and Dialga/Palkia.          |](#-origin-forms--3--3--origin-forms-represent-the-true-or-primal-state-of-certain-legendary-pokémon-showcasing-their-full-power-and-unique-design-ie--giratina-and-dialgapalkia----------)
   - [Note About APIs](#note-about-apis)
   - [Check Model Animations](#check-model-animations)
-  - [Test the Viewer](#test-the-viewer)
   - [License](#license)
+    - [The Pokémon3D project community](#the-pokémon3d-project-community)
   - [Contributors](#contributors)
 
 ---
@@ -74,7 +74,7 @@ We welcome contributions from the community! You can help by:
     ```bash
     git checkout -b add-new-pokemon-model
     ```
-4. **Make Your Changes**: Add new Pokémon models to the `PokeData.json` file and implement any necessary changes.
+4. **Make Your Changes**: Add new Pokémon models in the models and within the folder according to pokemon form and implement any necessary changes.
 5. **Commit Your Changes**: Commit your changes with a meaningful message.
     ```bash
     git commit -m "Added new Pokémon model named 'Pikachu'"
@@ -85,8 +85,6 @@ We welcome contributions from the community! You can help by:
     ```
 7. **Create a Pull Request**: Create a pull request to the main repository, describing your changes.
 
-### The Pokémon 3D project community 
-Join our Discord: [The Pokémon 3D project](https://discord.gg/4JptVPw8qn)
 
 ## How to Add More Models
 
@@ -139,10 +137,7 @@ This app supports various Pokémon forms and categories. Below is a breakdown of
 ---
 
 ## Note About APIs
-
-While there are many **Pokémon APIs** available that provide Pokémon data (e.g., stats, types, moves, etc.), **most of these APIs do not offer 3D models** of Pokémon. 
-- **Why don't these APIs provide 3D models?**: Providing 3D models requires significant storage and bandwidth. Models are often large in size (several MBs) and need to be game-ready to load efficiently on mobile devices. Hosting them for free or public use can be challenging due to storage and bandwidth limitations. Additionally, game-ready models may not be freely available.
-- **Why don't we use other APIs?**: While you can retrieve detailed Pokémon information (like types, stats, and abilities) from APIs like [Pokémon API](https://pokeapi.co/), these services typically do not provide 3D models. Consequently, incorporating 3D models into this app would require substantial storage space for hosting the model files independently.
+While there are many Pokémon APIs available that provide Pokémon data (e.g., stats, types, moves, etc.), most of these APIs do not offer 3D models of Pokémon.  This is primarily due to the significant storage and bandwidth requirements for hosting and serving 3D models, as well as potential licensing issues.  Existing APIs like [PokéAPI](https://pokeapi.co/) are excellent resources for general Pokémon information, but they do not include 3D models.
 
 ## Check Model Animations
 
@@ -151,17 +146,11 @@ To verify whether a model contains animations or to inspect its structure, you c
 2. If the extension is set as the default, you can easily open the 3D model from the sidebar or by right-clicking the file and selecting **3D Preview**.  
 3. If the model contains animations, they will appear in a dropdown menu; otherwise, no animations will be shown.
 
-## Test the Viewer
-
-Additionally, you can test the model viewer with the **Example.html** file included in the project. This file allows you to input a Pokémon ID and see if the 3D model is fetched from the API and displayed correctly in the browser.
-
-To use this, simply open the `Example.html` file in your browser, enter a Pokémon ID, and click **Load Pokémon Model**. The viewer will fetch the 3D model from the API and display it. This serves as a test to ensure that the models are being fetched correctly and can also give you an idea of how to fetch and display Pokémon models in your own projects.
-
-By using this example, you can verify if the API is working as expected and get familiar with how to integrate and display Pokémon 3D models in your app.
-
 ## License
-
 This project is open source and available under the [MIT License](./LICENSE).
+
+### The Pokémon3D project community 
+Join our Discord: [The Pokémon 3D project](https://discord.gg/4JptVPw8qn)
 
 ## Contributors
 <a href = "https://github.com/Sudhanshu-Ambastha/Pokemon-3D/contributors">
