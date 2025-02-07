@@ -15,8 +15,10 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
   - [How to Add More Models](#how-to-add-more-models)
   - [Dependencies](#dependencies)
   - [Pokémon Categories and Counts](#pokémon-categories-and-counts)
+  - [| **Origin Forms** | 3 | 3 | Origin Forms represent the true or primal state of certain legendary Pokémon, showcasing their full power and unique design. i.e  Giratina, and Dialga/Palkia.          |](#-origin-forms--3--3--origin-forms-represent-the-true-or-primal-state-of-certain-legendary-pokémon-showcasing-their-full-power-and-unique-design-ie--giratina-and-dialgapalkia----------)
   - [Note About APIs](#note-about-apis)
   - [Check Model Animations](#check-model-animations)
+  - [Credits](#credits)
   - [License](#license)
     - [The Pokémon3D project community](#the-pokémon3d-project-community)
   - [Contributors](#contributors)
@@ -139,11 +141,17 @@ This app supports various Pokémon forms and categories. Below is a breakdown of
 While there are many Pokémon APIs available that provide Pokémon data (e.g., stats, types, moves, etc.), most of these APIs do not offer 3D models of Pokémon.  This is primarily due to the significant storage and bandwidth requirements for hosting and serving 3D models, as well as potential licensing issues.  Existing APIs like [PokéAPI](https://pokeapi.co/) are excellent resources for general Pokémon information, but they do not include 3D models.
 
 ## Check Model Animations
-
 To verify whether a model contains animations or to inspect its structure, you can use the **[3D Preview](https://marketplace.visualstudio.com/items?itemName=mohitkumartoshniwal.3d-preview)** extension in Visual Studio Code. This extension allows you to preview 3D models directly in the editor, making it easier to inspect and test your models.
 1. Upload your `.glb` or `.gltf` file to Visual Studio Code, or open it using Visual Studio Code.  
 2. If the extension is set as the default, you can easily open the 3D model from the sidebar or by right-clicking the file and selecting **3D Preview**.  
 3. If the model contains animations, they will appear in a dropdown menu; otherwise, no animations will be shown.
+
+## Credits
+Check [Credits.md](./CREDITS.md) for a list of contributors and resources used in this project.  This project is a community-driven effort
+to provide a comprehensive and accessible 3D model database for Pokémon.  We appreciate the contributions of
+everyone who has helped make this project a reality.  If you have any questions or would like to
+contribute, please don't hesitate to reach out.  We're always happy to help and appreciate
+any assistance you can provide.  Thank you for your interest in this project!
 
 ## License
 This project is open source and available under the [MIT License](./LICENSE).
