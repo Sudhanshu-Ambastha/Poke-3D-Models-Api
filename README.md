@@ -35,7 +35,7 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
 
 ## Using the API
 
-If you want to fetch Pokémon data from this project to use in your own applications [check docs](https://www.postman.com/weather-data/pokemon3d-api/documentation/8u7tw60/pokemon3d-api), follow these steps:
+If you want to fetch Pokémon data from this project to use in your own applications [check docs](https://documenter.getpostman.com/view/29725199/2sAYX8KMU8), follow these steps:
 
 ### API Endpoint
 The Pokémon data is exposed as a JSON API. You can access it using the following URL:
