@@ -78,7 +78,7 @@ We welcome contributions from the community! You can help by:
 4. **Make Your Changes**: Add new Pokémon models in the models and within the folder according to pokemon form and implement any necessary changes.
 5. **Commit Your Changes**: Commit your changes with a meaningful message.
     ```bash
-    git commit -m "Added new Pokémon model named 'Pikachu'"
+    git commit -m "Added new Pokémon model id '25' and name 'Pikachu'"
     ```
 6. **Push to Your Fork**: Push your changes to your fork on GitHub.
     ```bash
