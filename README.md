@@ -1,5 +1,10 @@
 # Pokémon 3D Models
 Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view Pokémon in 3D using the `<model-viewer>` component. The app fetches data about Pokémon, displays their names, and lets users preview 3D models of various Pokémon.
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=js,npm,nodejs,mongo,threejs" />
+  </a>
+</p>
 
 ---
 
@@ -19,6 +24,7 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
   - [Check Model Animations](#check-model-animations)
   - [Credits](#credits)
   - [License](#license)
+  - [Legal Notice](#legal-notice)
     - [The Pokémon3D project community](#the-pokémon3d-project-community)
   - [Contributors](#contributors)
 
@@ -77,7 +83,7 @@ We welcome contributions from the community! You can help by:
 4. **Make Your Changes**: Add new Pokémon models in the models and within the folder according to pokemon form and implement any necessary changes.
 5. **Commit Your Changes**: Commit your changes with a meaningful message.
     ```bash
-    git commit -m "Added new Pokémon model id '25' and name 'Pikachu'"
+    git commit -m "Added new Pokémon model named 'Pikachu'"
     ```
 6. **Push to Your Fork**: Push your changes to your fork on GitHub.
     ```bash
@@ -153,10 +159,14 @@ contribute, please don't hesitate to reach out.  We're always happy to help and 
 any assistance you can provide.  Thank you for your interest in this project!
 
 ## License
-This project is open source and available under the [MIT License](./LICENSE).
+This project is open source and available under the [![GitHub License](https://img.shields.io/github/license/Sudhanshu-Ambastha/Pokemon-3D)](./LICENSE). ![GitHub Tag](https://img.shields.io/github/v/tag/Sudhanshu-Ambastha/Pokemon-3D)
+
+## Legal Notice
+
+For more information about the legal considerations related to this project, please see the [COPYRIGHT.md](./COPYRIGHT.md) file.
 
 ### The Pokémon3D project community 
-Join our Discord: [The Pokémon 3D project](https://discord.gg/4JptVPw8qn)
+Join our Discord: [![Join us on Discord](https://img.shields.io/discord/mycoolserver?label=Join%20us%20on%20Discord&logo=discord&style=social)](https://discord.gg/4JptVPw8qn)
 
 ## Contributors
 <a href = "https://github.com/Sudhanshu-Ambastha/Pokemon-3D/contributors">
