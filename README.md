@@ -168,6 +168,8 @@ For more information about the legal considerations related to this project, ple
 ### The Pokémon3D project community 
 Join our Discord: [![Join us on Discord](https://img.shields.io/discord/mycoolserver?label=Join%20us%20on%20Discord&logo=discord&style=social)](https://discord.gg/4JptVPw8qn)
 
+<h1 align="center">Don't just clone 🤖 it, also star 🌟 it!</h1>
+
 ## Contributors
 <a href = "https://github.com/Sudhanshu-Ambastha/Pokemon-3D/contributors">
   <img src = "https://contrib.rocks/image?repo=Sudhanshu-Ambastha/Pokemon-3D"/>
