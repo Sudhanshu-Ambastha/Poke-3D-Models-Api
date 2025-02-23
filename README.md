@@ -18,8 +18,11 @@ Welcome to the **Pokémon 3D Model Viewer**! This project allows users to view P
   - [Contributing](#contributing)
     - [Steps to Contribute:](#steps-to-contribute)
   - [How to Add More Models](#how-to-add-more-models)
+  - [Converting .glb Models to JSX Components](#converting-glb-models-to-jsx-components)
+    - [Steps to Convert `.glb` to `.jsx`](#steps-to-convert-glb-to-jsx)
   - [Dependencies](#dependencies)
   - [Pokémon Categories and Counts](#pokémon-categories-and-counts)
+  - [| **Origin Forms** | 3 | 3 | Origin Forms represent the true or primal state of certain legendary Pokémon, showcasing their full power and unique design. i.e  Giratina, and Dialga/Palkia.          |](#-origin-forms--3--3--origin-forms-represent-the-true-or-primal-state-of-certain-legendary-pokémon-showcasing-their-full-power-and-unique-design-ie--giratina-and-dialgapalkia----------)
   - [Note About APIs](#note-about-apis)
   - [Check Model Animations](#check-model-animations)
   - [Credits](#credits)
@@ -97,18 +100,52 @@ We welcome contributions from the community! You can help by:
 To add new Pokémon models to the app, follow these steps:
 
 1. **Find or Create a 3D Model**: Search for Pokémon 3D models that are in `.glb` or `.gltf` formats. You can find models on various 3D model websites or create your own.
-2. **Update the `PokeData.json`**: 
+2. **Update the `Regular.json`**: 
     - Add an entry for the new Pokémon.
     - Set the `model` property to the path of the 3D model.
     Example:
     ```json
    {
       "id": 25,
-      "name": "Pikachu",
-      "model": "./models/25.glb"
+      "name": "Shiny Pikachu",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main/models/glb/shiny/25.glb",
+      "JsxComp": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main/models/gltfjsx/shiny/25.jsx"
     },
     ```
 3. **Ensure the Model is Hosted**: You can either host the model yourself or use an external link to the model file. Ensure the model is accessible from the project.
+
+## Converting .glb Models to JSX Components
+
+For developers using JSX/Next.js, working with `.glb` models directly can be challenging. Instead, we can convert `.glb` files to `.jsx` components, which makes rendering and interaction easier.
+
+### Steps to Convert `.glb` to `.jsx`
+
+1. **Install `gltfjsx`**  
+   First, install the required package globally or locally using npm:
+   ```bash
+   npm i gltfjsx
+   ```
+2. **Navigate to the Directory**
+   Move to the directory where your `.glb` file is stored:
+   ```
+   cd models/glb/
+   ```
+3. **Run the Conversion Command**
+   Use the following command to convert a `.glb` file into a `.jsx` component:
+   ```
+   npx gltfjsx 150.glb -o ../../gltfjsx/shadow/150.jsx
+   ```
+   - 150.glb → The input .glb file
+   - -o ../../gltfjsx/shadow/150.jsx → Output directory for the .jsx file
+4. **Ensuring Default Export** After conversion, make sure the generated `.jsx` file exports the model as a default component. 
+  If not, update the export statement at the end of the file:
+  ```
+  const  bulbasaur= (props) => {
+  ---Content leave as it is---
+  export default bulbasaur;
+  ```
+  This ensures that the component can be imported correctly without causing errors.
+
 
 ## Dependencies
 ```

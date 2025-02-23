@@ -16,18 +16,18 @@ function fetchPokemonData() {
     const formFilter = document.getElementById('formFilter').value;
 
     const filePaths = {
-        regular: './PokeData.json',
-        alolan: './models/alolan/alolan.json',
-        galarian: './models/galar/galar.json',
-        huisian: './models/hisuian/hisuian.json',
-        mega: './models/mega/mega.json',
-        gmax: './models/gmax/Gmax.json',
-        megaxy: './models/xy.json',
-        unique: './models/unique/unique.json',
-        shiny: './models/shiny/Shiny.json',
-        primal:'./models/primal/primal.json',
-        origin:'./models/origin/origin.json',  
-        multi:'./models/multiForm/MultiForm.json',  
+        regular: './models/json/Regular.json',
+        alolan: './models/json/alolan.json',
+        galarian: './models/json/galar.json',
+        huisian: './models/json/hisuian.json',
+        mega: './models/json/mega.json',
+        gmax: './models/json/Gmax.json',
+        megaxy: './models/json/xy.json',
+        unique: './models/json/unique.json',
+        shiny: './models/json/Shiny.json',
+        primal:'./models/json/primal.json',
+        origin:'./models/json/origin.json',  
+        multi:'./models/json/MultiForm.json',  
     };
 
     const selectedPaths = formFilter === 'all'
