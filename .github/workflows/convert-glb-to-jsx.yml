@@ -72,11 +72,14 @@ jobs:
         shell: bash
 
       - name: Commit and Push Changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git checkout -B update-jsx-files
           git add models/gltfjsx/
           git commit -m "Updated JSX files for modified GLB models" || echo "No changes to commit"
-          git push -f origin update-jsx-files
+          git push -f https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git update-jsx-files
+
         shell: bash
