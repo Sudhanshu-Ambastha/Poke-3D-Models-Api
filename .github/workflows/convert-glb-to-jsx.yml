@@ -2,9 +2,10 @@ name: Convert Updated GLB to JSX
 
 on:
   push:
+    branches: ["main"]
     paths:
-      - "models/glb/**/*.glb" # Runs only if a .glb file changes
-  workflow_dispatch: # Allows manual trigger
+      - "models/glb/**/*.glb"
+  workflow_dispatch:
 
 jobs:
   convert-glb:
@@ -13,7 +14,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Ensure full commit history
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -22,6 +23,9 @@ jobs:
 
       - name: Install gltfjsx
         run: npm install -g gltfjsx
+
+      - name: Check gltfjsx version
+        run: gltfjsx --version
 
       - name: Find Modified GLB Files
         id: changed-files
@@ -34,6 +38,8 @@ jobs:
           echo "FILES<<EOF" >> $GITHUB_ENV
           echo "$FILES" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
+          echo "Modified GLB files: $FILES" # Debugging output
+          git diff --name-only HEAD^ HEAD -- 'models/glb/**/*.glb' #added for debugging
         shell: bash
 
       - name: Convert or Update JSX Files
@@ -50,7 +56,6 @@ jobs:
             github_url="$GITHUB_BASE_URL/$glb_file"
 
             if [ -f "$output_file" ]; then
-              # Check if the JSX file already has the correct path
               if grep -q "useGLTF(\"$github_url\")" "$output_file"; then
                 echo "✅ $output_file is already up to date."
                 continue
@@ -62,9 +67,7 @@ jobs:
               npx gltfjsx "$glb_file" -o "$output_file"
             fi
 
-            # Ensure export default is used
             sed -i 's/export function Model/export default function Model/' "$output_file"
-            # Update the GLB path in JSX file if incorrect
             sed -i "s|useGLTF(\".*.glb\")|useGLTF(\"$github_url\")|" "$output_file"
             sed -i "s|useGLTF.preload(\".*.glb\")|useGLTF.preload(\"$github_url\")|" "$output_file"
             echo "✅ Updated JSX: $output_file"
@@ -72,11 +75,14 @@ jobs:
         shell: bash
 
       - name: Commit and Push Changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git checkout -B update-jsx-files
           git add models/gltfjsx/
+          git status #debugging output
           git commit -m "Updated JSX files for modified GLB models" || echo "No changes to commit"
-          git push -f origin update-jsx-files
+          git push -f https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git update-jsx-files
         shell: bash
