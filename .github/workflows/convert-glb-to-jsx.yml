@@ -39,6 +39,7 @@ jobs:
           echo "$FILES" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
           echo "Modified GLB files: $FILES" # Debugging output
+          git diff --name-only HEAD^ HEAD -- 'models/glb/**/*.glb' #added for debugging
         shell: bash
 
       - name: Convert or Update JSX Files
