@@ -159,7 +159,6 @@ node server.js
 ```
 
 ## Pokémon Categories and Counts
-
 This app supports various Pokémon forms and categories. Below is a breakdown of the available Pokémon models and their counts:
 
 | **Category**       | **Available** | **Total** | **Description**                                                                 |
