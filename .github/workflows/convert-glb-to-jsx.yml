@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Ensure full commit history
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -24,26 +26,31 @@ jobs:
       - name: Find Modified GLB Files
         id: changed-files
         run: |
-          FILES=$(git diff --name-only HEAD^ HEAD -- 'models/glb/**/*.glb' | xargs)
-          echo "FILES=$FILES" >> $GITHUB_ENV
+          if git rev-parse HEAD^ >/dev/null 2>&1; then
+            FILES=$(git diff --name-only HEAD^ HEAD -- 'models/glb/**/*.glb')
+          else
+            FILES=$(git ls-files -- 'models/glb/**/*.glb')
+          fi
+          echo "FILES<<EOF" >> $GITHUB_ENV
+          echo "$FILES" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+        shell: bash
 
       - name: Convert or Update JSX Files
         if: env.FILES != ''
         run: |
           GITHUB_BASE_URL="https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main"
-
-          for glb_file in $FILES; do
+          while IFS= read -r glb_file; do
+            [ -z "$glb_file" ] && continue
             category=$(basename "$(dirname "$glb_file")")
             output_dir="models/gltfjsx/$category"
             mkdir -p "$output_dir"
-
             model_name=$(basename "$glb_file" .glb)
             output_file="$output_dir/$model_name.jsx"
-
             github_url="$GITHUB_BASE_URL/$glb_file"
 
             if [ -f "$output_file" ]; then
-              # If JSX file exists, check if it has the correct path
+              # Check if the JSX file already has the correct path
               if grep -q "useGLTF(\"$github_url\")" "$output_file"; then
                 echo "✅ $output_file is already up to date."
                 continue
@@ -57,18 +64,19 @@ jobs:
 
             # Ensure export default is used
             sed -i 's/export function Model/export default function Model/' "$output_file"
-
             # Update the GLB path in JSX file if incorrect
             sed -i "s|useGLTF(\".*.glb\")|useGLTF(\"$github_url\")|" "$output_file"
             sed -i "s|useGLTF.preload(\".*.glb\")|useGLTF.preload(\"$github_url\")|" "$output_file"
-
             echo "✅ Updated JSX: $output_file"
-          done
+          done < <(echo "$FILES")
+        shell: bash
 
       - name: Commit and Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -B update-jsx-files
           git add models/gltfjsx/
           git commit -m "Updated JSX files for modified GLB models" || echo "No changes to commit"
-          git push
+          git push -f origin update-jsx-files
+        shell: bash
