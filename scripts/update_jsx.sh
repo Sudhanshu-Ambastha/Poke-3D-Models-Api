@@ -30,6 +30,12 @@ find models/gltfjsx -type f -name "*.jsx" | while read -r jsx_file; do
   # Construct the GitHub URL for the GLB file
   github_glb_url="${GITHUB_BASE_URL}/${glb_file}"
   
+  # Check if the file already contains the correct URL
+  if grep -q "$github_glb_url" "$jsx_file"; then
+    echo "Skipping unchanged: $jsx_file"
+    continue
+  fi
+  
   echo "Updating JSX file: $jsx_file"
   echo " - Setting GLB URL: $github_glb_url"
   
