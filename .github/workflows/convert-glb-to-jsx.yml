@@ -38,9 +38,8 @@ jobs:
           echo "FILES<<EOF" >> $GITHUB_ENV
           echo "$FILES" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
-          echo "Modified GLB files: $FILES" # Debugging output
-          git diff --name-only HEAD^ HEAD -- 'models/glb/**/*.glb' #added for debugging
-        shell: bash
+          touch failed_models.txt  # Ensure failed_models.txt exists
+          echo "" > failed_models.txt  # Clear previous content
 
       - name: Convert or Update JSX Files
         if: env.FILES != ''
@@ -64,7 +63,13 @@ jobs:
               fi
             else
               echo "🚀 Converting new model: $glb_file -> $output_file"
-              npx gltfjsx "$glb_file" -o "$output_file"
+              if ! npx gltfjsx "$glb_file" -o "$output_file" 2>error.log; then
+                echo "❌ Conversion failed for: $glb_file"
+                echo "$glb_file" >> failed_models.txt
+                cat error.log >> failed_models.txt
+                echo "" >> failed_models.txt
+                continue  # Skip to next model
+              fi
             fi
 
             sed -i 's/export function Model/export default function Model/' "$output_file"
@@ -82,7 +87,8 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git checkout -B update-jsx-files
           git add models/gltfjsx/
-          git status #debugging output
-          git commit -m "Updated JSX files for modified GLB models" || echo "No changes to commit"
+          git add failed_models.txt
+          git status  # Debugging output
+          git commit -m "Updated JSX files for modified GLB models and logged failed models" || echo "No changes to commit"
           git push -f https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git update-jsx-files
         shell: bash
