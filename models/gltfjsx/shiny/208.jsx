@@ -10,7 +10,7 @@ Title: GameCube - Super Smash Bros Melee - Steelix ⭐️
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const { nodes, materials } = useGLTF('/208.glb')
   return (
     <group {...props} dispose={null}>

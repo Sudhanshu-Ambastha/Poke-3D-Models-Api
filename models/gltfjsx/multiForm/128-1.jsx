@@ -6,7 +6,7 @@ Command: npx gltfjsx@6.5.3 128-1.glb -o ../../gltfjsx/multiForm/128-1.jsx
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const { nodes, materials } = useGLTF('https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main/models/glb/megaForm/128-1.glb')
   return (
     <group {...props} dispose={null}>

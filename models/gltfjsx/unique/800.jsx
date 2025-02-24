@@ -10,7 +10,7 @@ Title: Ultra Necrozma (Re-upload)
 import React from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const group = React.useRef()
   const { nodes, materials, animations } = useGLTF('/800.glb')
   const { actions } = useAnimations(animations, group)

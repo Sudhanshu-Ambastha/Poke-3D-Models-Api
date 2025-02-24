@@ -6,7 +6,7 @@ Command: npx gltfjsx@6.5.3 models/glb/unique/890.glb -o models/gltfjsx/unique/89
 import React from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const group = React.useRef()
   const { nodes, materials, animations } = useGLTF('/890.glb')
   const { actions } = useAnimations(animations, group)

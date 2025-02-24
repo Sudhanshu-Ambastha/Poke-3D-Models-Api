@@ -10,7 +10,7 @@ Title: Pawniard
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const { nodes, materials } = useGLTF('/624.glb')
   return (
     <group {...props} dispose={null}>

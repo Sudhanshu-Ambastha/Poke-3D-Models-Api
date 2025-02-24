@@ -10,7 +10,7 @@ Title: CHARIZARD X
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const { nodes, materials } = useGLTF('https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main/models/glb/x/6.glb')
   return (
     <group {...props} dispose={null}>
