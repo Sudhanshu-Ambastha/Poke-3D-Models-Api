@@ -12,7 +12,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Ensure full history is available
+          fetch-depth: 0  # Get full history
 
       - name: Find Uncommitted JSX Files
         id: uncommitted-jsx
@@ -27,13 +27,13 @@ jobs:
           GITHUB_BASE_URL="https://raw.githubusercontent.com/${{ github.repository }}/main"
           UPDATED_FILES=""
 
-          # Find all JSX files inside models/gltfjsx/ (including uncommitted ones)
+          # Find all JSX files in models/gltfjsx/
           for jsx_file in $(find models/gltfjsx -name "*.jsx"); do
             model_name=$(basename "$jsx_file" .jsx)
-            glb_file=$(find models/glb -name "$model_name.glb" | head -n 1)  # Find corresponding GLB file
+            glb_file=$(find models/glb -name "$model_name.glb" | head -n 1)  # Find matching GLB
             
             if [ -z "$glb_file" ]; then
-              echo "❌ No matching GLB found for $jsx_file, skipping..."
+              echo "❌ No matching GLB for $jsx_file, skipping..."
               continue
             fi
 
@@ -57,7 +57,6 @@ jobs:
             fi
           done
 
-          # Save the updated files to an env variable
           echo -e "UPDATED_FILES<<EOF\n$UPDATED_FILES\nEOF" >> $GITHUB_ENV
 
       - name: Commit and Push Changes
@@ -65,13 +64,17 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --global user.name "github-actions[bot]"
+          git config --global user.name "GitHub Actions"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout -B update-jsx-paths
-          
-          # Stage changes, including uncommitted JSX files
+
           git add models/gltfjsx/
           git status  # Debugging output
-          
-          git commit -m "Updated JSX file paths and exports" || echo "No changes to commit"
-          git push -f https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git update-jsx-paths
+
+          if git diff --cached --exit-code; then
+            echo "✅ No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "Updated JSX file paths and exports"
+          git push origin main || (echo "⚠️ Main branch protected, creating new branch..." && \
+            git checkout -b update-jsx-paths && git push origin update-jsx-paths)
