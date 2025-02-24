@@ -1,4 +1,4 @@
-name: Update GLB Paths in JSX
+name: Fix GLB Paths in JSX
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Ensure full history for accurate checks
+          fetch-depth: 0
 
       - name: Find and Update GLB Paths in JSX
         id: update-paths
@@ -35,11 +35,11 @@ jobs:
             github_glb_url="$GITHUB_BASE_URL/$glb_file"
 
             # Update useGLTF paths
-            if grep -q 'useGLTF("' "$jsx_file"; then
+            if grep -q 'useGLTF(' "$jsx_file"; then
               if ! grep -q "useGLTF(\"$github_glb_url\")" "$jsx_file"; then
                 echo "🔄 Updating useGLTF path in: $jsx_file"
-                sed -i "s|useGLTF(\".*.glb\")|useGLTF(\"$github_glb_url\")|" "$jsx_file"
-                sed -i "s|useGLTF.preload(\".*.glb\")|useGLTF.preload(\"$github_glb_url\")|" "$jsx_file"
+                sed -i "s|useGLTF(\"[^\"]*\.glb\")|useGLTF(\"$github_glb_url\")|" "$jsx_file"
+                sed -i "s|useGLTF.preload(\"[^\"]*\.glb\")|useGLTF.preload(\"$github_glb_url\")|" "$jsx_file"
                 UPDATED_FILES+="$jsx_file\n"
               fi
             fi
