@@ -34,7 +34,13 @@ jobs:
       - name: Handle Conversion Errors
         run: bash scripts/handle_errors.sh
 
+      - name: Cleanup Orphaned JSX Files
+        run: bash scripts/cleanup_orphan_jsx.sh
+
       - name: Commit and Push Changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: bash scripts/commit_push.sh
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          bash scripts/commit_push.sh
