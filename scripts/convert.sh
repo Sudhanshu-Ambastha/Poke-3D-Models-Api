@@ -11,7 +11,7 @@ mkdir -p logs
 # Clear any previous error log
 > "$ERROR_LOG"
 
-echo "🔄Starting GLB to JSX conversion..."
+echo "🔄 Starting GLB to JSX conversion..."
 
 # Read each GLB file path from the missing files log
 while IFS= read -r glb_file; do
@@ -29,19 +29,20 @@ while IFS= read -r glb_file; do
   # Ensure output directory exists
   mkdir -p "$output_dir"
   
-  echo "🔄Converting: $glb_file -> $output_file"
+  echo "🔄 Converting: $glb_file -> $output_file"
   
   # Run npx gltfjsx conversion command
   if npx gltfjsx "$glb_file" -o "$output_file"; then
-    echo "✅Successfully converted: $output_file"
+    echo "✅ Successfully converted: $output_file"
   else
-    echo "❌Conversion failed for: $glb_file" | tee -a "$ERROR_LOG"
+    echo "❌ Conversion failed for: $glb_file" | tee -a "$ERROR_LOG"
   fi
 done < "$MISSING_FILE_LOG"
 
 # Report conversion results
 if [ -s "$ERROR_LOG" ]; then
-  echo "❌Some conversions failed. 📄Please check $ERROR_LOG for details."
+  echo "❌ Conversion failed for the following file(s):"
+  cat "$ERROR_LOG"
 else
-  echo "✅All conversions completed successfully."
+  echo "⛔ No missing files found"
 fi
