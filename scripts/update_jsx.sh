@@ -59,4 +59,4 @@ if [ "$updated_count" -eq 0 ]; then
   echo "❌No changes made. All JSX files were up-to-date."
 fi
 
-echo "✅JSX file updates completed. Files updated: $updated_count; Files skipped: $skipped_count."
+echo "✅JSX file updates completed. Files updated⬆: $updated_count; Files skipped⏭️: $skipped_count."
