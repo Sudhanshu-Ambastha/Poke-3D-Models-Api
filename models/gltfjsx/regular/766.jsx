@@ -7,7 +7,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF('/766.glb')
+  const { nodes, materials } = useGLTF('https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main/models/glb/regular/766.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.pm0815_00_00_body_mesh_shape_body_a_01.geometry} material={materials.body_a_01} position={[0, 0.609, 0.044]} rotation={[1.087, 0, 0]} />
@@ -23,4 +23,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('/766.glb')
+useGLTF.preload('https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main/models/glb/regular/766.glb')

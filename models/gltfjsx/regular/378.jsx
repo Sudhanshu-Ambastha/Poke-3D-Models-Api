@@ -11,7 +11,7 @@ import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 export default function Model(props) {
-  const { nodes, materials } = useGLTF('/378.glb')
+  const { nodes, materials } = useGLTF('https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main/models/glb/regular/378.glb')
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Body_Unwrap_Texture_Checker_Material_0.geometry} material={materials.Unwrap_Texture_Checker_Material} position={[0.151, -3.262, -7.614]} rotation={[-Math.PI / 2, 0, Math.PI / 2]} scale={1.377} />
@@ -20,4 +20,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('/378.glb')
+useGLTF.preload('https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main/models/glb/regular/378.glb')

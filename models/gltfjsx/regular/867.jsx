@@ -12,7 +12,7 @@ import { useGLTF, useAnimations } from '@react-three/drei'
 
 export default function Model(props) {
   const group = React.useRef()
-  const { nodes, materials, animations } = useGLTF('/867.glb')
+  const { nodes, materials, animations } = useGLTF('https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main/models/glb/regular/867.glb')
   const { actions } = useAnimations(animations, group)
   return (
     <group ref={group} {...props} dispose={null}>
@@ -877,4 +877,4 @@ export default function Model(props) {
   )
 }
 
-useGLTF.preload('/867.glb')
+useGLTF.preload('https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main/models/glb/regular/867.glb')
