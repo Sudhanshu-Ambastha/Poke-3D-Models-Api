@@ -15,6 +15,9 @@ GITHUB_BASE_URL="https://raw.githubusercontent.com/${REPO_SLUG}/${BRANCH}"
 
 echo "Updating JSX files using base URL: ${GITHUB_BASE_URL}"
 
+skipped_count=0
+updated_count=0
+
 # Iterate through all JSX files in models/gltfjsx
 find models/gltfjsx -type f -name "*.jsx" | while read -r jsx_file; do
   model_name=$(basename "$jsx_file" .jsx)
@@ -30,9 +33,9 @@ find models/gltfjsx -type f -name "*.jsx" | while read -r jsx_file; do
   # Construct the GitHub URL for the GLB file
   github_glb_url="${GITHUB_BASE_URL}/${glb_file}"
   
-  # Check if the file already contains the correct URL
+  # Check if the file already contains the correct URL.
   if grep -q "$github_glb_url" "$jsx_file"; then
-    echo "Skipping unchanged: $jsx_file"
+    skipped_count=$((skipped_count + 1))
     continue
   fi
   
@@ -48,7 +51,12 @@ find models/gltfjsx -type f -name "*.jsx" | while read -r jsx_file; do
     sed -i 's/export function Model/export default function Model/' "$jsx_file"
   fi
   
+  updated_count=$((updated_count + 1))
   echo "Updated: $jsx_file"
 done
 
-echo "JSX file updates completed."
+if [ "$updated_count" -eq 0 ]; then
+  echo "No changes made. All JSX files were up-to-date."
+fi
+
+echo "JSX file updates completed. Files updated: $updated_count; Files skipped: $skipped_count."
