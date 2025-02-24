@@ -1,5 +1,1 @@
-models/glb/multiShinyForm/Deoxys Speed Form.glb
-models/glb/multiShinyForm/Deoxys Defense Form.glb
-models/glb/multiShinyForm/Deoxys Attack Form.glb
-models/glb/fusion/black kyurem.glb
-models/glb/fusion/White Kyurem.glb
+No missing files found
