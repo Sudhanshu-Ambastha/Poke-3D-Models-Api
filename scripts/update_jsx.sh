@@ -13,7 +13,7 @@ BRANCH=${2:-"main"}
 # Construct the GitHub raw base URL
 GITHUB_BASE_URL="https://raw.githubusercontent.com/${REPO_SLUG}/${BRANCH}"
 
-echo "Updating JSX files using base URL: ${GITHUB_BASE_URL}"
+echo "⬆Updating JSX files using base URL: ${GITHUB_BASE_URL}"
 
 skipped_count=0
 updated_count=0
@@ -26,7 +26,7 @@ find models/gltfjsx -type f -name "*.jsx" | while read -r jsx_file; do
   glb_file=$(find models/glb -type f -name "$model_name.glb" | head -n 1)
   
   if [ -z "$glb_file" ]; then
-    echo "No matching GLB found for $jsx_file, skipping..."
+    echo "❌ No matching GLB found for $jsx_file, skipping..."
     continue
   fi
   
@@ -39,8 +39,8 @@ find models/gltfjsx -type f -name "*.jsx" | while read -r jsx_file; do
     continue
   fi
   
-  echo "Updating JSX file: $jsx_file"
-  echo " - Setting GLB URL: $github_glb_url"
+  echo "⬆Updating JSX file: $jsx_file"
+  echo "🔂Setting GLB URL: $github_glb_url"
   
   # Update useGLTF paths in the JSX file (works with both single and double quotes)
   sed -i "s|useGLTF(['\"][^'\"]*\.glb['\"])|useGLTF('$github_glb_url')|g" "$jsx_file"
@@ -56,7 +56,7 @@ find models/gltfjsx -type f -name "*.jsx" | while read -r jsx_file; do
 done
 
 if [ "$updated_count" -eq 0 ]; then
-  echo "No changes made. All JSX files were up-to-date."
+  echo "❌No changes made. All JSX files were up-to-date."
 fi
 
-echo "JSX file updates completed. Files updated: $updated_count; Files skipped: $skipped_count."
+echo "✅JSX file updates completed. Files updated: $updated_count; Files skipped: $skipped_count."

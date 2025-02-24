@@ -3,7 +3,7 @@ set -e
 
 # This script removes orphaned JSX files (JSX files with no corresponding GLB file)
 
-echo "Cleaning up orphaned JSX files..."
+echo "🧹Cleaning up orphaned JSX files..."
 
 # Iterate over all JSX files
 find models/gltfjsx -type f -name "*.jsx" | while read -r jsx_file; do
@@ -13,9 +13,9 @@ find models/gltfjsx -type f -name "*.jsx" | while read -r jsx_file; do
   glb_file=$(find models/glb -type f -name "$model_name.glb" | head -n 1)
   
   if [ -z "$glb_file" ]; then
-    echo "No matching GLB found for $jsx_file. Removing..."
+    echo "⛔No matching GLB found for $jsx_file. 🗑️Removing..."
     rm -f "$jsx_file"
   fi
 done
 
-echo "Cleanup of orphaned JSX files complete."
+echo "✅Cleanup of orphaned JSX files complete."

@@ -9,7 +9,7 @@ LOG_FILE="models/missing_files.txt"
 mkdir -p logs
 > "$LOG_FILE"  # Clear previous log file
 
-echo "Checking for missing JSX files..."
+echo "🔍Checking for missing JSX files..."
 
 # Iterate over all .glb files
 find "$GLB_DIR" -type f -name "*.glb" | while read -r glb_file; do
@@ -25,8 +25,8 @@ done
 
 # Display results
 if [ -s "$LOG_FILE" ]; then
-    echo "Missing JSX files logged in $LOG_FILE"
+    echo "📄Missing JSX files logged in $LOG_FILE"
 else
-    echo "No missing JSX files found."
-    echo "No missing files found" > "$LOG_FILE"
+    echo "⛔No missing JSX files found."
+    echo "⛔No missing files found" > "$LOG_FILE"
 fi
