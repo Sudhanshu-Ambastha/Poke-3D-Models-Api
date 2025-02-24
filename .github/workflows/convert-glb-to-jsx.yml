@@ -35,18 +35,21 @@ jobs:
           else
             FILES=$(git ls-files -- 'models/glb/**/*.glb')
           fi
-          echo "FILES<<EOF" >> $GITHUB_ENV
-          echo "$FILES" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-          touch failed_models.txt  # Ensure failed_models.txt exists
+          echo "FILES=$FILES" >> $GITHUB_ENV
+          touch failed_models.txt  # Ensure file exists
           echo "" > failed_models.txt  # Clear previous content
+          echo "Detected GLB files: $FILES"  # Debugging output
 
       - name: Convert or Update JSX Files
         if: env.FILES != ''
         run: |
+          set -x  # Enable debug mode
           GITHUB_BASE_URL="https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main"
-          while IFS= read -r glb_file; do
-            [ -z "$glb_file" ] && continue
+
+          echo "Processing files: $FILES"
+
+          echo "$FILES" | while read -r glb_file; do
+            [ -z "$glb_file" ] && continue  # Skip empty lines
             category=$(basename "$(dirname "$glb_file")")
             output_dir="models/gltfjsx/$category"
             mkdir -p "$output_dir"
@@ -76,7 +79,7 @@ jobs:
             sed -i "s|useGLTF(\".*.glb\")|useGLTF(\"$github_url\")|" "$output_file"
             sed -i "s|useGLTF.preload(\".*.glb\")|useGLTF.preload(\"$github_url\")|" "$output_file"
             echo "✅ Updated JSX: $output_file"
-          done < <(echo "$FILES")
+          done
         shell: bash
 
       - name: Commit and Push Changes
@@ -86,9 +89,8 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git checkout -B update-jsx-files
-          git add models/gltfjsx/
-          git add failed_models.txt
+          git add models/gltfjsx/ failed_models.txt
           git status  # Debugging output
-          git commit -m "Updated JSX files for modified GLB models and logged failed models" || echo "No changes to commit"
+          git commit -m "Updated JSX files and logged failed models" || echo "No changes to commit"
           git push -f https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git update-jsx-files
         shell: bash
