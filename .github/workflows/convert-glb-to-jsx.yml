@@ -24,7 +24,7 @@ jobs:
       - name: Install gltfjsx
         run: npm install -g gltfjsx
 
-      - name: Check gltfjsx version
+      - name: Check gltfjsx Version
         run: gltfjsx --version
 
       - name: Find Modified GLB Files
@@ -35,24 +35,31 @@ jobs:
           else
             FILES=$(git ls-files -- 'models/glb/**/*.glb')
           fi
-          echo "FILES=$FILES" >> $GITHUB_ENV
-          touch failed_models.txt  # Ensure file exists
-          echo "" > failed_models.txt  # Clear previous content
-          echo "Detected GLB files: $FILES"  # Debugging output
+          echo "FILES=$(echo "$FILES" | tr '\n' ' ')" >> $GITHUB_ENV
+          echo "Detected GLB files: $FILES"
+
+      - name: Debug Found Files
+        run: |
+          echo "FILES from GitHub Env: $FILES"
+          ls -R models/glb || echo "models/glb directory is missing!"
 
       - name: Convert or Update JSX Files
         if: env.FILES != ''
         run: |
-          set -x  # Enable debug mode
+          set -x
           GITHUB_BASE_URL="https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main"
+          mkdir -p models/gltfjsx
+          touch failed_models.txt && echo "" > failed_models.txt
 
           echo "Processing files: $FILES"
 
           echo "$FILES" | while read -r glb_file; do
-            [ -z "$glb_file" ] && continue  # Skip empty lines
+            [ -z "$glb_file" ] && continue
+
             category=$(basename "$(dirname "$glb_file")")
             output_dir="models/gltfjsx/$category"
             mkdir -p "$output_dir"
+
             model_name=$(basename "$glb_file" .glb)
             output_file="$output_dir/$model_name.jsx"
             github_url="$GITHUB_BASE_URL/$glb_file"
@@ -66,12 +73,12 @@ jobs:
               fi
             else
               echo "🚀 Converting new model: $glb_file -> $output_file"
-              if ! npx gltfjsx "$glb_file" -o "$output_file" 2>error.log; then
+              if ! npx gltfjsx "$glb_file" -o "$output_file" --verbose 2>&1 | tee error.log; then
                 echo "❌ Conversion failed for: $glb_file"
                 echo "$glb_file" >> failed_models.txt
                 cat error.log >> failed_models.txt
                 echo "" >> failed_models.txt
-                continue  # Skip to next model
+                continue
               fi
             fi
 
@@ -80,7 +87,6 @@ jobs:
             sed -i "s|useGLTF.preload(\".*.glb\")|useGLTF.preload(\"$github_url\")|" "$output_file"
             echo "✅ Updated JSX: $output_file"
           done
-        shell: bash
 
       - name: Commit and Push Changes
         env:
@@ -90,7 +96,6 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git checkout -B update-jsx-files
           git add models/gltfjsx/ failed_models.txt
-          git status  # Debugging output
+          git status
           git commit -m "Updated JSX files and logged failed models" || echo "No changes to commit"
           git push -f https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git update-jsx-files
-        shell: bash
