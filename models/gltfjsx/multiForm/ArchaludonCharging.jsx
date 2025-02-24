@@ -6,7 +6,7 @@ Command: npx gltfjsx@6.5.3 models/glb/multiForm/ArchaludonCharging.glb -o models
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const { nodes, materials } = useGLTF('/ArchaludonCharging.glb')
   return (
     <group {...props} dispose={null}>

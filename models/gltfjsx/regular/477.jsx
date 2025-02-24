@@ -10,7 +10,7 @@ Title: Dusknoir
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const { nodes, materials } = useGLTF('/477.glb')
   return (
     <group {...props} dispose={null}>

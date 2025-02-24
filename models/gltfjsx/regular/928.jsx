@@ -10,7 +10,7 @@ Title: Smoliv 2.0
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const { nodes, materials } = useGLTF('/928.glb')
   return (
     <group {...props} dispose={null}>

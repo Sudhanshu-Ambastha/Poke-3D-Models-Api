@@ -6,7 +6,7 @@ Command: npx gltfjsx@6.5.3 models/glb/galar/80.glb -o models/gltfjsx/galar/80.js
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const { nodes, materials } = useGLTF('/80.glb')
   return (
     <group {...props} dispose={null}>

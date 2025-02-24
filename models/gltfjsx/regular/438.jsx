@@ -10,7 +10,7 @@ Title: Bonsly
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const { nodes, materials } = useGLTF('/438.glb')
   return (
     <group {...props} dispose={null}>

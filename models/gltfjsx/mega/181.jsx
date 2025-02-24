@@ -10,7 +10,7 @@ Title: 3DS - Pokemon Super Mystery Dungeon - 181 Mega A
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const { nodes, materials } = useGLTF('/181.glb')
   return (
     <group {...props} dispose={null}>

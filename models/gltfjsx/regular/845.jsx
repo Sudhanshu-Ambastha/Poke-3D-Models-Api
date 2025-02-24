@@ -8,7 +8,7 @@ import { useGraph } from '@react-three/fiber'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { SkeletonUtils } from 'three-stdlib'
 
-export function Model(props) {
+export default function Model(props) {
   const group = React.useRef()
   const { scene, animations } = useGLTF('/845.glb')
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])

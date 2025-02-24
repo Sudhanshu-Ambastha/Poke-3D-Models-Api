@@ -6,7 +6,7 @@ Command: npx gltfjsx@6.5.3 models/glb/shiny/288.glb -o models/gltfjsx/shiny/288.
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const { nodes, materials } = useGLTF('/288.glb')
   return (
     <group {...props} dispose={null}>

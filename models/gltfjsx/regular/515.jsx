@@ -6,7 +6,7 @@ Command: npx gltfjsx@6.5.3 models/glb/regular/515.glb -o models/gltfjsx/regular/
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const { nodes, materials } = useGLTF('/515.glb')
   return (
     <group {...props} dispose={null}>

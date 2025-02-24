@@ -10,7 +10,7 @@ Title: 3DS - Pokedex 3D Pro - 227 Skarmory
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const { nodes, materials } = useGLTF('/227.glb')
   return (
     <group {...props} dispose={null}>

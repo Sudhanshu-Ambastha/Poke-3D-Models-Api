@@ -10,7 +10,7 @@ Title: 3DS - Pokemon Super Mystery Dungeon - 128 Tauros
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const { nodes, materials } = useGLTF('/128.glb')
   return (
     <group {...props} dispose={null}>

@@ -10,7 +10,7 @@ Title: 3DS - Pokedex 3D Pro - 095 Onix ⭐️
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export function Model(props) {
+export default function Model(props) {
   const { nodes, materials } = useGLTF('/95.glb')
   return (
     <group {...props} dispose={null}>
