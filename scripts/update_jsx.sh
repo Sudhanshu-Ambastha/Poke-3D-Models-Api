@@ -52,7 +52,7 @@ find models/gltfjsx -type f -name "*.jsx" | while read -r jsx_file; do
   fi
   
   updated_count=$((updated_count + 1))
-  echo "Updated: $jsx_file"
+  echo "⬆Updated: $jsx_file"
 done
 
 if [ "$updated_count" -eq 0 ]; then
