@@ -8,9 +8,9 @@ import { useGraph } from '@react-three/fiber'
 import { useGLTF, useAnimations } from '@react-three/drei'
 import { SkeletonUtils } from 'three-stdlib'
 
-export function Model(props) {
+export default function Deoxys_Speed_Form(props) {
   const group = React.useRef()
-  const { scene, animations } = useGLTF('/Deoxys_Speed_Form.glb')
+  const { scene, animations } = useGLTF('https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main/models/glb/multiShinyForm/Deoxys_Speed_Form.glb')
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone)
   const { actions } = useAnimations(animations, group)
@@ -31,4 +31,4 @@ export function Model(props) {
   )
 }
 
-useGLTF.preload('/Deoxys_Speed_Form.glb')
+useGLTF.preload('https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main/models/glb/multiShinyForm/Deoxys_Speed_Form.glb')
