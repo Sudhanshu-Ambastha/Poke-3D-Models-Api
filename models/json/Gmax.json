@@ -191,6 +191,12 @@
       "name": "Urshifu",
       "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main/models/glb/gmax/892.glb",
       "JsxComp": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main/models/gltfjsx/gmax/892.jsx"
+    },
+    {
+      "id": 892,
+      "name": "Urshifu",
+      "model": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main/models/glb/gmax/892-2.glb",
+      "JsxComp": "https://raw.githubusercontent.com/Sudhanshu-Ambastha/Pokemon-3D/main/models/gltfjsx/gmax/892-2.jsx"
     }
   ]
 }
