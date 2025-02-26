@@ -1,3 +1,1 @@
-models/glb/multiShinyForm/Deoxys_Defense_Form.glb
-models/glb/multiShinyForm/Deoxys_Attack_Form.glb
-models/glb/multiShinyForm/Deoxys_Speed_Form.glb
+⛔No missing files found
