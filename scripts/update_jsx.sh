@@ -9,17 +9,21 @@ echo "🔄 Processing JSX file updates..."
 find models/gltfjsx -type f -name "*.jsx" -print0 | while IFS= read -r -d $'\0' jsx_file; do
   folder=$(dirname "${jsx_file#models/gltfjsx/}")
   modelname=$(basename -- "$jsx_file" .jsx)
-  NEW_PATH="$BASE_URL/$folder/$modelname.glb"
+  GLB_PATH="$BASE_URL/$folder/$modelname.glb"
 
-  # Update useGLTF if needed
-  if ! grep -q "useGLTF('$NEW_PATH')" "$jsx_file"; then
-    sed -i -E "s|useGLTF\('https://raw.githubusercontent.com.*/models/glb/.*.glb'\)|useGLTF('$NEW_PATH')|g" "$jsx_file"
-  fi
+  # Update useGLTF and useGLTF.preload with the full URL
+  sed -i "s|useGLTF('.*')|useGLTF('$GLB_PATH')|g" "$jsx_file"
+  sed -i "s|useGLTF.preload('.*')|useGLTF.preload('$GLB_PATH')|g" "$jsx_file"
 
-  # Update useGLTF.preload if needed
-  if ! grep -q "useGLTF.preload('$NEW_PATH')" "$jsx_file"; then
-    sed -i -E "s|useGLTF.preload\('https://raw.githubusercontent.com.*/models/glb/.*.glb'\)|useGLTF.preload('$NEW_PATH')|g" "$jsx_file"
-  fi
+  # Change the function name to match the filename and set it as default export
+  NEW_FUNCTION_NAME=$(echo "$modelname" | sed -E 's/([-_])([a-z])/\\U\2/g') # Convert snake_case or kebab-case to PascalCase
+  NEW_FUNCTION_NAME=$(echo "${NEW_FUNCTION_NAME^}") # Capitalize the first letter
+
+  sed -i "s/export function Model(props)/export default function $NEW_FUNCTION_NAME(props)/g" "$jsx_file"
+
+  # Remove the old useGLTF.preload if it exists
+  sed -i "/useGLTF.preload('https:\/\/raw.githubusercontent.com.*\/models\/glb\/.*.glb');/d" "$jsx_file"
+
 done
 
 echo "✅ JSX file updates completed!"
