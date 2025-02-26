@@ -114,6 +114,10 @@ To add new Pokémon models to the app, follow these steps:
     ```
 3. **Ensure the Model is Hosted**: You can either host the model yourself or use an external link to the model file. Ensure the model is accessible from the project.
 
+```
+npm install -g @gltf-transform/cli
+npm install @gltf-transform/cli --save-dev
+```
 ## Converting .glb Models to JSX Components
 
 For developers using JSX/Next.js, working with `.glb` models directly can be challenging. Instead, we can convert `.glb` files to `.jsx` components, which makes rendering and interaction easier.
@@ -164,7 +168,7 @@ This app supports various Pokémon forms and categories. Below is a breakdown of
 | **Category**       | **Available** | **Total** | **Description**                                                                 |
 |---------------------|---------------|-----------|---------------------------------------------------------------------------------|
 | **Regular Forms**   | 943            | 1028      | Standard Pokémon forms from Generations 1 to 9 including male & female.        |
-| **Shiny Forms**     | 49            | 1028      | Alternate color variants of all standard Pokémon.                              |
+| **Shiny Forms**     | 54            | 1028      | Alternate color variants of all standard Pokémon.                              |
 | **Gigantamax**      | 10             | 32        | Special forms of select Pokémon with unique appearances in *Sword and Shield*. |
 | **Mega Evolutions** | 48             | 49        | Includes both single Mega forms and X/Y variants.                              |
 | **MegaShiny Evolutions** | 4         | 49        | Includes both single Mega forms and X/Y variants.                              |
