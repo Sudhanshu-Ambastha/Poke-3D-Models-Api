@@ -1,48 +1,20 @@
 #!/bin/bash
-set -e
 
-# Define paths
-MISSING_FILE_LOG="models/missing_files.txt"
-ERROR_LOG="models/error.txt"
+SRC_DIR="models/glb"
+DEST_DIR="models/gltfjsx"
 
-# Ensure logs directory exists
-mkdir -p logs
+echo "🔄Converting GLB files from: $SRC_DIR"
+echo "✅Saving JSX files to: $DEST_DIR"
 
-# Clear any previous error log
-> "$ERROR_LOG"
+for glb_file in $(find $SRC_DIR -type f -name "*.glb"); do
+  # Extract folder and filename
+  folder=$(dirname "${glb_file#$SRC_DIR/}") # Get folder inside models/glb
+  filename=$(basename -- "$glb_file")
+  modelname="${filename%.glb}"
 
-echo "🔄 Starting GLB to JSX conversion..."
+  echo "🔄Processing: $glb_file"
+  echo "✅Expected output path: $DEST_DIR/$folder/$modelname.jsx"
 
-# Read each GLB file path from the missing files log
-while IFS= read -r glb_file; do
-  # Skip empty lines or if file states no missing files
-  if [ -z "$glb_file" ] || [[ "$glb_file" == "No missing files found" ]]; then
-    continue
-  fi
-  
-  # Determine output directory and file
-  category=$(basename "$(dirname "$glb_file")")
-  model_name=$(basename "$glb_file" .glb)
-  output_dir="models/gltfjsx/$category"
-  output_file="$output_dir/$model_name.jsx"
-  
-  # Ensure output directory exists
-  mkdir -p "$output_dir"
-  
-  echo "🔄 Converting: $glb_file -> $output_file"
-  
-  # Run npx gltfjsx conversion command
-  if npx gltfjsx "$glb_file" -o "$output_file"; then
-    echo "✅ Successfully converted: $output_file"
-  else
-    echo "❌ Conversion failed for: $glb_file" | tee -a "$ERROR_LOG"
-  fi
-done < "$MISSING_FILE_LOG"
-
-# Report conversion results
-if [ -s "$ERROR_LOG" ]; then
-  echo "❌ Conversion failed for the following file(s):"
-  cat "$ERROR_LOG"
-else
-  echo "⛔ No missing files found"
-fi
+  mkdir -p "$DEST_DIR/$folder"
+  npx gltfjsx@6.5.3 "$glb_file" -o "$DEST_DIR/$folder/$modelname.jsx"
+done
